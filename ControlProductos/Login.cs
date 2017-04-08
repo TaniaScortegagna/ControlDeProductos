@@ -16,5 +16,17 @@ namespace ControlProductos
         {
             InitializeComponent();
         }
+
+        private void btnaceptar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal iniciar = new MenuPrincipal();
+            iniciar.Show();
+            this.Hide();
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
     }
 }
