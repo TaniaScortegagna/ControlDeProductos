@@ -28,58 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.lblusuario = new System.Windows.Forms.Label();
+            this.lblclave = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.btnaceptar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblusuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario:";
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(31, 31);
+            this.lblusuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(60, 16);
+            this.lblusuario.TabIndex = 0;
+            this.lblusuario.Text = "Usuario:";
             // 
-            // label2
+            // lblclave
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Clave:";
+            this.lblclave.AutoSize = true;
+            this.lblclave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblclave.Location = new System.Drawing.Point(35, 82);
+            this.lblclave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblclave.Name = "lblclave";
+            this.lblclave.Size = new System.Drawing.Size(50, 16);
+            this.lblclave.TabIndex = 1;
+            this.lblclave.Text = "Clave:";
             // 
             // txtuser
             // 
+            this.txtuser.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtuser.Location = new System.Drawing.Point(125, 18);
+            this.txtuser.Location = new System.Drawing.Point(110, 31);
             this.txtuser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtuser.MaxLength = 15;
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(261, 23);
+            this.txtuser.Size = new System.Drawing.Size(224, 23);
             this.txtuser.TabIndex = 2;
             // 
             // txtpass
             // 
+            this.txtpass.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpass.Location = new System.Drawing.Point(125, 69);
+            this.txtpass.Location = new System.Drawing.Point(112, 75);
             this.txtpass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpass.MaxLength = 10;
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(261, 23);
+            this.txtpass.PasswordChar = '*';
+            this.txtpass.Size = new System.Drawing.Size(222, 23);
             this.txtpass.TabIndex = 3;
             // 
             // btnaceptar
             // 
             this.btnaceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaceptar.Location = new System.Drawing.Point(125, 147);
+            this.btnaceptar.Location = new System.Drawing.Point(59, 122);
             this.btnaceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnaceptar.Name = "btnaceptar";
             this.btnaceptar.Size = new System.Drawing.Size(100, 28);
@@ -91,7 +97,7 @@
             // btncancelar
             // 
             this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.Location = new System.Drawing.Point(265, 146);
+            this.btncancelar.Location = new System.Drawing.Point(199, 121);
             this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(100, 28);
@@ -104,20 +110,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(404, 188);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(362, 166);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnaceptar);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblclave);
+            this.Controls.Add(this.lblusuario);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,12 +134,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblusuario;
+        private System.Windows.Forms.Label lblclave;
         private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Button btnaceptar;
         private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.TextBox txtpass;
     }
 }
 

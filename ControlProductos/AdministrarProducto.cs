@@ -14,19 +14,31 @@ namespace ControlProductos
     {
         public AdministrarProducto()
         {
+            
             InitializeComponent();
+        }
+
+        private void dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'controlProductosDataSet.Productos' Puede moverla o quitarla según sea necesario.
-            this.productosTableAdapter.Fill(this.controlProductosDataSet.Productos);
-
+           
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnnuevo_Click(object sender, EventArgs e)
         {
+            NuevoProducto iniciar = new NuevoProducto();
+            iniciar.Show();
+            this.Close();
+        }
 
+        private void btnvolver_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal iniciar = new MenuPrincipal();
+            iniciar.Show();
         }
     }
 }

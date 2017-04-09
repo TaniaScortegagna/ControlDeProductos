@@ -17,12 +17,11 @@ namespace ControlProductos
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnadmprod_Click(object sender, EventArgs e)
         {
-           
             AdministrarProducto iniciar = new AdministrarProducto();
             iniciar.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

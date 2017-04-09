@@ -1,12 +1,17 @@
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.exe.config
-D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe.config
-D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe
-D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.pdb
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csprojResolveAssemblyReference.cache
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.AdministrarProducto.resources
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.MenuPrincipal.resources
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Login.resources
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.exe
-D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.pdb
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.exe
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.pdb
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.csprojResolveAssemblyReference.cache
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.AdministrarProducto.resources
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.MenuPrincipal.resources
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.Login.resources
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.exe
+c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.pdb
+C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.Productos.resources
+C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.NuevoProducto.resources
+C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.exe.manifest
+C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.application
+C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.exe.manifest
+C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.application

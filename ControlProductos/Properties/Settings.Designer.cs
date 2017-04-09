@@ -33,5 +33,15 @@ namespace ControlProductos.Properties {
                 return ((string)(this["ControlProductosConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TANIA-PC;Initial Catalog=ControlDeProductos;Integrated Security=True")]
+        public string ControlDeProductosConnectionString {
+            get {
+                return ((string)(this["ControlDeProductosConnectionString"]));
+            }
+        }
     }
 }
