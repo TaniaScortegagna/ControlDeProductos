@@ -48,7 +48,8 @@ namespace ControlProductos
                                     WHERE Usuario = '{0}' AND Clave ='{1}'",
                                     this.usuario, this.contraseña);
            this.comandosql = new SqlCommand(this.sql,this.cnn);
-           this.cnn.Open();
+//           this.cnn.Open();
+           this.Conectar();
            SqlDataReader Reg = null;
            Reg = this.comandosql.ExecuteReader();
            if(Reg.Read())
@@ -60,7 +61,8 @@ namespace ControlProductos
                {
                 this.mensaje ="Datos Incorrectos";
                 }
-            this.cnn.Close();
+//            this.cnn.Close();
+           this.Desconectar();
             return Resultado;
 
         }

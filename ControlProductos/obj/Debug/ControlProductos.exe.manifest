@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlProductos.exe" size="588288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlProductos.exe" size="692736">
       <assemblyIdentity name="ControlProductos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RqdREMopw6FPDmICpfrrQqxcI/PEEbHbGsTZuZESpZQ=</dsig:DigestValue>
+        <dsig:DigestValue>UTApw+U0H31CJBKWZW99jhNTUo4B2wJgj5xUYSqPlyM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

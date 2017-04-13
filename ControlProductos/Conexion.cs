@@ -15,6 +15,8 @@ namespace ControlProductos
         protected SqlConnection cnn;
         protected SqlCommand comandosql;
         protected String mensaje;
+        public ControlDeProductosDataSet dataset = new ControlDeProductosDataSet();
+        public SqlDataAdapter adaptersql;
 
         public Conexion()
         {
@@ -22,11 +24,22 @@ namespace ControlProductos
             this.cnn = new SqlConnection(this.conexiones);
 
         }
+        public void Conectar()
+        {
+            this.cnn.Open();
+        }
+
+        public void Desconectar()
+        {
+            this.cnn.Close();
+        }
+
         public String Mensaje
         {
             get {
                 return this.mensaje;
                   }
         }
+
     }
 }

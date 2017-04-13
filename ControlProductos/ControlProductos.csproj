@@ -78,6 +78,12 @@
     <Compile Include="AdministrarProducto.Designer.cs">
       <DependentUpon>AdministrarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datos.cs" />
+    <Compile Include="ControlDeProductosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlDeProductosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ControlDeProductosDataSet.xsc">
+      <DependentUpon>ControlDeProductosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControlDeProductosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlDeProductosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControlDeProductosDataSet.xss">
+      <DependentUpon>ControlDeProductosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
