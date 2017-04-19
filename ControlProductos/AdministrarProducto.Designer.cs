@@ -42,12 +42,14 @@
             this.rubrosTableAdapter = new ControlProductos.ControlDeProductosDataSetTableAdapters.RubrosTableAdapter();
             this.controlProductosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new ControlProductos.ControlDeProductosDataSetTableAdapters.TableAdapterManager();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbfamilias = new System.Windows.Forms.ComboBox();
+            this.cmbrubros = new System.Windows.Forms.ComboBox();
             this.gvproductos = new System.Windows.Forms.DataGridView();
             this.btverprod = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblproveedor = new System.Windows.Forms.Label();
+            this.cmbproveedores = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.controlDeProductosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familiasBindingSource)).BeginInit();
@@ -58,10 +60,10 @@
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(12, 38);
+            this.txtbuscar.Location = new System.Drawing.Point(456, 76);
             this.txtbuscar.Multiline = true;
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(172, 21);
+            this.txtbuscar.Size = new System.Drawing.Size(215, 21);
             this.txtbuscar.TabIndex = 0;
             this.txtbuscar.Text = "Buscar...";
             // 
@@ -70,9 +72,9 @@
             this.btnvolver.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolver.Image = global::ControlProductos.Properties.Resources.cancelar;
             this.btnvolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvolver.Location = new System.Drawing.Point(736, 240);
+            this.btnvolver.Location = new System.Drawing.Point(736, 199);
             this.btnvolver.Name = "btnvolver";
-            this.btnvolver.Size = new System.Drawing.Size(93, 50);
+            this.btnvolver.Size = new System.Drawing.Size(88, 39);
             this.btnvolver.TabIndex = 4;
             this.btnvolver.Text = "Volver";
             this.btnvolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,9 +86,9 @@
             this.btnnuevo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevo.Image = global::ControlProductos.Properties.Resources.agregar;
             this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnuevo.Location = new System.Drawing.Point(736, 170);
+            this.btnnuevo.Location = new System.Drawing.Point(732, 141);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(93, 50);
+            this.btnnuevo.Size = new System.Drawing.Size(92, 42);
             this.btnnuevo.TabIndex = 3;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,22 +137,22 @@
             this.tableAdapterManager.UpdateOrder = ControlProductos.ControlDeProductosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // comboBox1
+            // cmbfamilias
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.familiasBindingSource, "IdFamilia", true));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(251, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cmbfamilias.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.familiasBindingSource, "IdFamilia", true));
+            this.cmbfamilias.FormattingEnabled = true;
+            this.cmbfamilias.Location = new System.Drawing.Point(201, 36);
+            this.cmbfamilias.Name = "cmbfamilias";
+            this.cmbfamilias.Size = new System.Drawing.Size(189, 21);
+            this.cmbfamilias.TabIndex = 5;
             // 
-            // comboBox2
+            // cmbrubros
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(497, 38);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(215, 21);
-            this.comboBox2.TabIndex = 6;
+            this.cmbrubros.FormattingEnabled = true;
+            this.cmbrubros.Location = new System.Drawing.Point(456, 36);
+            this.cmbrubros.Name = "cmbrubros";
+            this.cmbrubros.Size = new System.Drawing.Size(215, 21);
+            this.cmbrubros.TabIndex = 6;
             // 
             // gvproductos
             // 
@@ -158,7 +160,7 @@
             this.gvproductos.AllowUserToDeleteRows = false;
             this.gvproductos.BackgroundColor = System.Drawing.Color.White;
             this.gvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvproductos.Location = new System.Drawing.Point(12, 89);
+            this.gvproductos.Location = new System.Drawing.Point(12, 123);
             this.gvproductos.Name = "gvproductos";
             this.gvproductos.ReadOnly = true;
             this.gvproductos.Size = new System.Drawing.Size(718, 301);
@@ -166,9 +168,9 @@
             // 
             // btverprod
             // 
-            this.btverprod.Location = new System.Drawing.Point(572, 396);
+            this.btverprod.Location = new System.Drawing.Point(12, 39);
             this.btverprod.Name = "btverprod";
-            this.btverprod.Size = new System.Drawing.Size(115, 28);
+            this.btverprod.Size = new System.Drawing.Size(88, 49);
             this.btverprod.TabIndex = 8;
             this.btverprod.Text = "Ver Productos";
             this.btverprod.UseVisualStyleBackColor = true;
@@ -179,7 +181,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(192, 43);
+            this.label1.Location = new System.Drawing.Point(122, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 9;
@@ -190,24 +192,45 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(446, 43);
+            this.label2.Location = new System.Drawing.Point(405, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Rubro:";
+            // 
+            // lblproveedor
+            // 
+            this.lblproveedor.AutoSize = true;
+            this.lblproveedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblproveedor.ForeColor = System.Drawing.Color.Black;
+            this.lblproveedor.Location = new System.Drawing.Point(122, 77);
+            this.lblproveedor.Name = "lblproveedor";
+            this.lblproveedor.Size = new System.Drawing.Size(73, 16);
+            this.lblproveedor.TabIndex = 11;
+            this.lblproveedor.Text = "Proveedor:";
+            // 
+            // cmbproveedores
+            // 
+            this.cmbproveedores.FormattingEnabled = true;
+            this.cmbproveedores.Location = new System.Drawing.Point(201, 76);
+            this.cmbproveedores.Name = "cmbproveedores";
+            this.cmbproveedores.Size = new System.Drawing.Size(189, 21);
+            this.cmbproveedores.TabIndex = 12;
             // 
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(836, 436);
+            this.ClientSize = new System.Drawing.Size(825, 436);
+            this.Controls.Add(this.cmbproveedores);
+            this.Controls.Add(this.lblproveedor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btverprod);
             this.Controls.Add(this.gvproductos);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbrubros);
+            this.Controls.Add(this.cmbfamilias);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.txtbuscar);
@@ -242,11 +265,13 @@
         private ControlDeProductosDataSetTableAdapters.RubrosTableAdapter rubrosTableAdapter;
         private System.Windows.Forms.BindingSource controlProductosDataSetBindingSource;
         private ControlDeProductosDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbfamilias;
+        private System.Windows.Forms.ComboBox cmbrubros;
         private System.Windows.Forms.DataGridView gvproductos;
         private System.Windows.Forms.Button btverprod;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblproveedor;
+        private System.Windows.Forms.ComboBox cmbproveedores;
     }
 }

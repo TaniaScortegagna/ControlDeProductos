@@ -29,80 +29,83 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btneditar = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.lblcodigo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbcodigo = new System.Windows.Forms.TextBox();
+            this.txbnombre = new System.Windows.Forms.TextBox();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbdescripcion = new System.Windows.Forms.TextBox();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.lblrubro = new System.Windows.Forms.Label();
             this.lblfamilia = new System.Windows.Forms.Label();
             this.lblproveedor = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbproveedores = new System.Windows.Forms.ComboBox();
+            this.cmbrubros = new System.Windows.Forms.ComboBox();
+            this.cmbfamilias = new System.Windows.Forms.ComboBox();
             this.lblmarca = new System.Windows.Forms.Label();
             this.lblprecio = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbprecio = new System.Windows.Forms.TextBox();
+            this.txbmarca = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnstrored = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btneditar
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ControlProductos.Properties.Resources.editar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(17, 331);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 57);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.Image = global::ControlProductos.Properties.Resources.editar;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneditar.Location = new System.Drawing.Point(17, 331);
+            this.btneditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(110, 54);
+            this.btneditar.TabIndex = 1;
+            this.btneditar.Text = "Editar";
+            this.btneditar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btneliminar
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::ControlProductos.Properties.Resources.eliminar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(180, 331);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 57);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btneliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Image = global::ControlProductos.Properties.Resources.eliminar;
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.Location = new System.Drawing.Point(165, 331);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(110, 54);
+            this.btneliminar.TabIndex = 2;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btncancelar
             // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::ControlProductos.Properties.Resources.cancelar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(343, 331);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 57);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Image = global::ControlProductos.Properties.Resources.cancelar;
+            this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncancelar.Location = new System.Drawing.Point(326, 331);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(110, 54);
+            this.btncancelar.TabIndex = 3;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
-            // button4
+            // btnguardar
             // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::ControlProductos.Properties.Resources.guardar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(520, 331);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 57);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Guardar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnguardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.Image = global::ControlProductos.Properties.Resources.guardar;
+            this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnguardar.Location = new System.Drawing.Point(478, 331);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(110, 54);
+            this.btnguardar.TabIndex = 4;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // lblcodigo
             // 
@@ -115,21 +118,22 @@
             this.lblcodigo.TabIndex = 5;
             this.lblcodigo.Text = "Codigo:";
             // 
-            // textBox1
+            // txbcodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 24);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 23);
-            this.textBox1.TabIndex = 6;
+            this.txbcodigo.Location = new System.Drawing.Point(113, 28);
+            this.txbcodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txbcodigo.Name = "txbcodigo";
+            this.txbcodigo.ReadOnly = true;
+            this.txbcodigo.Size = new System.Drawing.Size(160, 23);
+            this.txbcodigo.TabIndex = 6;
             // 
-            // textBox2
+            // txbnombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 106);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 23);
-            this.textBox2.TabIndex = 8;
+            this.txbnombre.Location = new System.Drawing.Point(113, 111);
+            this.txbnombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txbnombre.Name = "txbnombre";
+            this.txbnombre.Size = new System.Drawing.Size(160, 23);
+            this.txbnombre.TabIndex = 8;
             // 
             // lblnombre
             // 
@@ -142,13 +146,13 @@
             this.lblnombre.TabIndex = 7;
             this.lblnombre.Text = "Nombre:";
             // 
-            // textBox3
+            // txbdescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(115, 190);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 23);
-            this.textBox3.TabIndex = 10;
+            this.txbdescripcion.Location = new System.Drawing.Point(113, 195);
+            this.txbdescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txbdescripcion.Name = "txbdescripcion";
+            this.txbdescripcion.Size = new System.Drawing.Size(160, 23);
+            this.txbdescripcion.TabIndex = 10;
             // 
             // lbldescripcion
             // 
@@ -165,7 +169,7 @@
             // 
             this.lblrubro.AutoSize = true;
             this.lblrubro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblrubro.Location = new System.Drawing.Point(323, 197);
+            this.lblrubro.Location = new System.Drawing.Point(333, 198);
             this.lblrubro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblrubro.Name = "lblrubro";
             this.lblrubro.Size = new System.Drawing.Size(50, 16);
@@ -194,32 +198,32 @@
             this.lblproveedor.TabIndex = 11;
             this.lblproveedor.Text = "Proveedor:";
             // 
-            // comboBox1
+            // cmbproveedores
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(452, 30);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 16;
+            this.cmbproveedores.FormattingEnabled = true;
+            this.cmbproveedores.Location = new System.Drawing.Point(415, 31);
+            this.cmbproveedores.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbproveedores.Name = "cmbproveedores";
+            this.cmbproveedores.Size = new System.Drawing.Size(160, 24);
+            this.cmbproveedores.TabIndex = 16;
             // 
-            // comboBox2
+            // cmbrubros
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(452, 188);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 24);
-            this.comboBox2.TabIndex = 17;
+            this.cmbrubros.FormattingEnabled = true;
+            this.cmbrubros.Location = new System.Drawing.Point(415, 195);
+            this.cmbrubros.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbrubros.Name = "cmbrubros";
+            this.cmbrubros.Size = new System.Drawing.Size(160, 24);
+            this.cmbrubros.TabIndex = 17;
             // 
-            // comboBox3
+            // cmbfamilias
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(452, 103);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(160, 24);
-            this.comboBox3.TabIndex = 18;
+            this.cmbfamilias.FormattingEnabled = true;
+            this.cmbfamilias.Location = new System.Drawing.Point(415, 110);
+            this.cmbfamilias.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbfamilias.Name = "cmbfamilias";
+            this.cmbfamilias.Size = new System.Drawing.Size(160, 24);
+            this.cmbfamilias.TabIndex = 18;
             // 
             // lblmarca
             // 
@@ -236,58 +240,81 @@
             // 
             this.lblprecio.AutoSize = true;
             this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprecio.Location = new System.Drawing.Point(323, 276);
+            this.lblprecio.Location = new System.Drawing.Point(331, 279);
             this.lblprecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprecio.Name = "lblprecio";
             this.lblprecio.Size = new System.Drawing.Size(52, 16);
             this.lblprecio.TabIndex = 20;
             this.lblprecio.Text = "Precio:";
             // 
-            // textBox4
+            // txbprecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(452, 276);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 23);
-            this.textBox4.TabIndex = 21;
+            this.txbprecio.Location = new System.Drawing.Point(415, 276);
+            this.txbprecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txbprecio.Name = "txbprecio";
+            this.txbprecio.Size = new System.Drawing.Size(160, 23);
+            this.txbprecio.TabIndex = 21;
             // 
-            // textBox5
+            // txbmarca
             // 
-            this.textBox5.Location = new System.Drawing.Point(115, 276);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 23);
-            this.textBox5.TabIndex = 22;
+            this.txbmarca.Location = new System.Drawing.Point(113, 273);
+            this.txbmarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txbmarca.Name = "txbmarca";
+            this.txbmarca.Size = new System.Drawing.Size(160, 23);
+            this.txbmarca.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(392, 276);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "$";
+            // 
+            // btnstrored
+            // 
+            this.btnstrored.Location = new System.Drawing.Point(13, 1);
+            this.btnstrored.Name = "btnstrored";
+            this.btnstrored.Size = new System.Drawing.Size(104, 23);
+            this.btnstrored.TabIndex = 24;
+            this.btnstrored.Text = "StoredPrueba";
+            this.btnstrored.UseVisualStyleBackColor = true;
+            this.btnstrored.Click += new System.EventHandler(this.btnstrored_Click);
             // 
             // NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(673, 418);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.ClientSize = new System.Drawing.Size(616, 395);
+            this.Controls.Add(this.btnstrored);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbmarca);
+            this.Controls.Add(this.txbprecio);
             this.Controls.Add(this.lblprecio);
             this.Controls.Add(this.lblmarca);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbfamilias);
+            this.Controls.Add(this.cmbrubros);
+            this.Controls.Add(this.cmbproveedores);
             this.Controls.Add(this.lblrubro);
             this.Controls.Add(this.lblfamilia);
             this.Controls.Add(this.lblproveedor);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbdescripcion);
             this.Controls.Add(this.lbldescripcion);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbnombre);
             this.Controls.Add(this.lblnombre);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbcodigo);
             this.Controls.Add(this.lblcodigo);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnguardar);
+            this.Controls.Add(this.btncancelar);
+            this.Controls.Add(this.btneliminar);
+            this.Controls.Add(this.btneditar);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.NuevoProducto_Load);
@@ -298,25 +325,27 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btneditar;
+        private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label lblcodigo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbcodigo;
+        private System.Windows.Forms.TextBox txbnombre;
         private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbdescripcion;
         private System.Windows.Forms.Label lbldescripcion;
         private System.Windows.Forms.Label lblrubro;
         private System.Windows.Forms.Label lblfamilia;
         private System.Windows.Forms.Label lblproveedor;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbproveedores;
+        private System.Windows.Forms.ComboBox cmbrubros;
+        private System.Windows.Forms.ComboBox cmbfamilias;
         private System.Windows.Forms.Label lblmarca;
         private System.Windows.Forms.Label lblprecio;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbprecio;
+        private System.Windows.Forms.TextBox txbmarca;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnstrored;
     }
 }

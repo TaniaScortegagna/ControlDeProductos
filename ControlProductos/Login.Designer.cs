@@ -91,6 +91,7 @@
             this.btnaceptar.Size = new System.Drawing.Size(100, 28);
             this.btnaceptar.TabIndex = 4;
             this.btnaceptar.Text = "Aceptar";
+            this.btnaceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnaceptar.UseVisualStyleBackColor = true;
             this.btnaceptar.Click += new System.EventHandler(this.btnaceptar_Click);
             // 
@@ -108,6 +109,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btnaceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -127,7 +129,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.White;
-            this.Load += new System.EventHandler(this.Login_Load);
+            this.Enter += new System.EventHandler(this.btnaceptar_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

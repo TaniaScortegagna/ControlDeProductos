@@ -31,7 +31,7 @@ namespace ControlProductos
 
             }
             else
-                MessageBox.Show("Usuario no autorizado");
+                MessageBox.Show(UsuarioOb.Mensaje,"ERROR");
         }
        
         private void btncancelar_Click(object sender, EventArgs e)
@@ -39,9 +39,6 @@ namespace ControlProductos
             this.Close();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

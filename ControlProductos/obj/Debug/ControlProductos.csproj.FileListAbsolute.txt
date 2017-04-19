@@ -9,7 +9,6 @@ c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlPro
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.exe
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.pdb
-C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.Productos.resources
 C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.NuevoProducto.resources
 C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.exe.manifest
 C:\Users\Tania\Documents\Visual Studio 2012\Projects\ControlProductos\ControlProductos\bin\Debug\ControlProductos.application

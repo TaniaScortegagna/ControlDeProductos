@@ -17,7 +17,9 @@ namespace ControlProductos
         protected String mensaje;
         public ControlDeProductosDataSet dataset = new ControlDeProductosDataSet();
         public SqlDataAdapter adaptersql;
-
+        public SqlDataReader dr;
+        public SqlDataReader dr2;
+        public SqlDataReader dr3;
         public Conexion()
         {
             this.conexiones = (@"Data source=(local);Initial Catalog = ControlDeProductos; integrated security = True");

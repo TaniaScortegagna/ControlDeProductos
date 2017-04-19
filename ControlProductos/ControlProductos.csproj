@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlDeProductosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Familia.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,15 +103,13 @@
     <Compile Include="NuevoProducto.Designer.cs">
       <DependentUpon>NuevoProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Productos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Productos.Designer.cs">
-      <DependentUpon>Productos.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Proveedores.cs" />
+    <Compile Include="Rubros.cs" />
+    <Compile Include="StoredPrueba.cs" />
     <Compile Include="Usuarios.cs" />
     <EmbeddedResource Include="AdministrarProducto.resx">
       <DependentUpon>AdministrarProducto.cs</DependentUpon>
@@ -123,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoProducto.resx">
       <DependentUpon>NuevoProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Productos.resx">
-      <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
