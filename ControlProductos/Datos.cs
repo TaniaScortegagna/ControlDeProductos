@@ -13,9 +13,9 @@ namespace ControlProductos
 {
     class Datos: Conexion
     {
-        public string text;
-        public int valor;
-    
+      
+
+        //Ver productos en el grid
         public DataTable cargarGrilla()
            {   
                 SqlCommand consulta = new SqlCommand(string.Format("SELECT * FROM Productos"), cnn);
@@ -23,7 +23,7 @@ namespace ControlProductos
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 this.Desconectar();
-                return dt;   
+                return dt;
             }
 
         public List<Proveedor> obtenerProveedores()
@@ -57,8 +57,9 @@ namespace ControlProductos
             while (dr2.Read())
             {
                 Familia pFamilia = new Familia();
-                pFamilia.IdFamilia = Convert.ToInt32(  dr2["IdFamilia"].ToString());
-                pFamilia.Nombre = dr2["Nombre"].ToString();
+                pFamilia.IdFamilia = dr2.GetInt32(0);
+                pFamilia.Nombre = dr2.GetString(1);
+
 
 
                 familias.Add(pFamilia);
@@ -101,8 +102,9 @@ namespace ControlProductos
           //     this.comandosql = new SqlCommand(this.sql,this.cnn);
             //   this.Conectar();
                this.comandosql = cnn.CreateCommand();
-               comandosql.CommandText = "EXECUTE abmProductos @Nombre,@Descripcion,@IdProveedor,@IdRubro,@Marca,@Precio, @Consulta";
+               comandosql.CommandText = "EXECUTE abmProductos  @Codigo,@Nombre,@Descripcion,@IdProveedor,@IdRubro,@Marca,@Precio, @Consulta";
 
+               comandosql.Parameters.Add("@Codigo", SqlDbType.Int).Value = pproducto.codigo;
                comandosql.Parameters.Add("@Nombre", SqlDbType.NChar, 50).Value = pproducto.nombre;
                comandosql.Parameters.Add("@Descripcion", SqlDbType.NChar, 50).Value = pproducto.descripcion;
                comandosql.Parameters.Add("@IdProveedor", SqlDbType.Int).Value = pproducto.proveedor;
@@ -114,7 +116,7 @@ namespace ControlProductos
                consulta = this.comandosql.ExecuteNonQuery();
  
 
-               if (consulta > 1 )
+               if (consulta >= 1 )
                {
                    resultado = true;
                }

@@ -216,7 +216,7 @@
             this.cmbproveedores.Name = "cmbproveedores";
             this.cmbproveedores.Size = new System.Drawing.Size(189, 21);
             this.cmbproveedores.TabIndex = 12;
-            // 
+
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

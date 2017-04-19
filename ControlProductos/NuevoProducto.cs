@@ -22,7 +22,8 @@ namespace ControlProductos
 
         private void NuevoProducto_Load(object sender, EventArgs e)
         {
-            
+            btneditar.Visible = false;
+            btneliminar.Visible = false;
             CargarCombos();
             AgregarEventos();
 
@@ -32,6 +33,7 @@ namespace ControlProductos
         {
 
             Datos d = new Datos();
+
             cmbproveedores.DataSource = d.obtenerProveedores();
             cmbproveedores.DisplayMember = "Nombre";
             cmbproveedores.ValueMember = "Id";
@@ -60,19 +62,19 @@ namespace ControlProductos
             Productos producto = new Productos();
             producto.nombre = txbnombre.Text;
             producto.descripcion = txbdescripcion.Text;
-            producto.proveedor = ((int)cmbfamilias.SelectedValue);
-            producto.rubro = ((int)cmbfamilias.SelectedValue);
+            producto.proveedor = ((int)cmbproveedores.SelectedValue);
+            producto.rubro = ((int)cmbrubros.SelectedValue);
             producto.marca = txbmarca.Text;
             producto.precio = txbprecio.Text;
             Datos d = new Datos();
             bool a = d.Agregar(producto); 
                 if (a== true)
                 {
-                    MessageBox.Show("DATOS GUARDADOS","CORRECTO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("DATOS GUARDADOS","CORRECTO", MessageBoxButtons.OK);
 
                 }
                 else
-                     MessageBox.Show( "Datos Incorrectos", "Error",MessageBoxButtons.OK);
+                     MessageBox.Show( "Datos Incorrectos", "Error");
                 }
 
 

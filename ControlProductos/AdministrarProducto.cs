@@ -24,6 +24,7 @@ namespace ControlProductos
 
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
+            btnnuevo.Visible = false;
             CargarCombos();
                      
         }
@@ -58,9 +59,10 @@ namespace ControlProductos
         
         private void btverprod_Click(object sender, EventArgs e)
         {
-             btnnuevo.Visible = true;
-             Datos datosOb = new Datos();
-             gvproductos.DataSource = datosOb.cargarGrilla();
+            btnnuevo.Visible = true;
+
+            Datos datosOb = new Datos();
+            gvproductos.DataSource = datosOb.cargarGrilla();
 
         }
 
@@ -79,6 +81,7 @@ namespace ControlProductos
             cmbrubros.DisplayMember = "Nombre";
             cmbrubros.ValueMember = "IdRubro";
         }
+
 
   
     }
