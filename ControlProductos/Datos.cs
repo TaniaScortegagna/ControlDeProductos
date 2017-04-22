@@ -11,10 +11,9 @@ using System.Windows.Forms;
 
 namespace ControlProductos
 {
-    class Datos: Conexion
+    class Datos: Conexion //Hereda la conexion de la BD de la clase Conexion
     {
       
-
         //Ver productos en el grid
         public DataTable cargarGrilla()
            {   
@@ -26,42 +25,40 @@ namespace ControlProductos
                 return dt;
             }
 
+        //Funcion para traer todos los proveedores a una lista
         public List<Proveedor> obtenerProveedores()
         {
             List<Proveedor> proveedores = new List<Proveedor>();
             this.Conectar();
             this.comandosql = new SqlCommand(string.Format("SELECT IdProv,Nombre FROM Proveedores"), cnn);
-            this.dr = comandosql.ExecuteReader();
-            while (dr.Read())
+            SqlDataReader drProveedores = null;
+            drProveedores = comandosql.ExecuteReader();
+            while (drProveedores.Read())
                 {
                     Proveedor pProveedor = new Proveedor();
-                    pProveedor.Id = dr.GetInt32(0);
-                    pProveedor.Nombre = dr.GetString(1);
+                    pProveedor.Id = drProveedores.GetInt32(0);
+                    pProveedor.Nombre = drProveedores.GetString(1);
 
                     proveedores.Add(pProveedor);
                  }
-            
-
-            this.Desconectar();
-           
+            this.Desconectar();           
             return proveedores;
         }
+
+        //Funcion para traer todos los Famillia a una lista
         public List<Familia> obtenerFamilia()
         {
            
             List<Familia> familias = new List<Familia>();
             this.Conectar();
             comandosql = new SqlCommand(string.Format("SELECT IdFamilia,Nombre FROM Familias"), cnn);
-            this.dr2 = comandosql.ExecuteReader();
-
-            while (dr2.Read())
+            SqlDataReader drFamilia = null;
+            drFamilia = comandosql.ExecuteReader();
+            while (drFamilia.Read())
             {
                 Familia pFamilia = new Familia();
-                pFamilia.IdFamilia = dr2.GetInt32(0);
-                pFamilia.Nombre = dr2.GetString(1);
-
-
-
+                pFamilia.IdFamilia = drFamilia.GetInt32(0);
+                pFamilia.Nombre = drFamilia.GetString(1);
                 familias.Add(pFamilia);
 
             }
@@ -69,41 +66,33 @@ namespace ControlProductos
             return familias;
         }
 
+        //Funcion para traer todos los Rubro a una lista
         public List<Rubro> obtenerRubro(int pIdFlia)
         {
             List<Rubro> rubros = new List<Rubro>();
             this.Conectar();
             this.comandosql = new SqlCommand(string.Format("SELECT IdRubro , Nombre FROM Rubros WHERE IdFlia = '{0}'", pIdFlia), cnn);
-            this.dr3 = comandosql.ExecuteReader();
-            while (dr3.Read())
+            SqlDataReader drRubro = null;
+            drRubro = comandosql.ExecuteReader();
+            while (drRubro.Read())
             {
                 Rubro pRubro = new Rubro();
-                pRubro.IdRubro = dr3.GetInt32(0);
-                pRubro.Nombre = dr3.GetString(1);
+                pRubro.IdRubro = drRubro.GetInt32(0);
+                pRubro.Nombre = drRubro.GetString(1);
 
                 rubros.Add(pRubro);
-
             }
+            this.Desconectar();
             return rubros;
         }
-
-    
+        //Realiza el insert en la tabla llamando el Stored procedure
         public bool Agregar(Productos pproducto)
             {
                bool resultado = false;
                int consulta = 0;
                int con = 1;
-               
-//               this.sql = string.Empty;
-  //             this.sql = string.Format(@"INSERT INTO Productos (nombre,descripcion,idProveedor,idRubro,marca,precio)
-    //                                            VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')",
-      //                                          pproducto.nombre, pproducto.descripcion,
-        //                                        pproducto.proveedor, pproducto.rubro, pproducto.marca, pproducto.precio);
-          //     this.comandosql = new SqlCommand(this.sql,this.cnn);
-            //   this.Conectar();
                this.comandosql = cnn.CreateCommand();
                comandosql.CommandText = "EXECUTE abmProductos  @Codigo,@Nombre,@Descripcion,@IdProveedor,@IdRubro,@Marca,@Precio, @Consulta";
-
                comandosql.Parameters.Add("@Codigo", SqlDbType.Int).Value = pproducto.codigo;
                comandosql.Parameters.Add("@Nombre", SqlDbType.NChar, 50).Value = pproducto.nombre;
                comandosql.Parameters.Add("@Descripcion", SqlDbType.NChar, 50).Value = pproducto.descripcion;
@@ -114,9 +103,7 @@ namespace ControlProductos
                comandosql.Parameters.Add("@Consulta", SqlDbType.Int).Value = con;
                this.Conectar();            
                consulta = this.comandosql.ExecuteNonQuery();
- 
-
-               if (consulta >= 1 )
+                if (consulta >= 1 )
                {
                    resultado = true;
                }

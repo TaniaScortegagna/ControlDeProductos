@@ -109,7 +109,6 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Proveedores.cs" />
     <Compile Include="Rubros.cs" />
-    <Compile Include="StoredPrueba.cs" />
     <Compile Include="Usuarios.cs" />
     <EmbeddedResource Include="AdministrarProducto.resx">
       <DependentUpon>AdministrarProducto.cs</DependentUpon>

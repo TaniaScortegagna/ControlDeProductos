@@ -19,7 +19,6 @@ namespace ControlProductos
             InitializeComponent();
         }
 
-
         private void NuevoProducto_Load(object sender, EventArgs e)
         {
             btneditar.Visible = false;
@@ -67,18 +66,18 @@ namespace ControlProductos
             producto.marca = txbmarca.Text;
             producto.precio = txbprecio.Text;
             Datos d = new Datos();
-            bool a = d.Agregar(producto); 
-                if (a== true)
-                {
-                    MessageBox.Show("DATOS GUARDADOS","CORRECTO", MessageBoxButtons.OK);
+            bool a = d.Agregar(producto);
+            if (a == true)
+            {
+                MessageBox.Show("DATOS GUARDADOS", "CORRECTO", MessageBoxButtons.OK);
 
-                }
-                else
-                     MessageBox.Show( "Datos Incorrectos", "Error");
-                }
+            }
+            else
+                MessageBox.Show("Datos Incorrectos", "Error");
+        }
 
 
-        
+
 
         private void cmbfamilias_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -87,16 +86,9 @@ namespace ControlProductos
             cmbrubros.DataSource = d.obtenerRubro((int)cmbfamilias.SelectedValue);
             cmbrubros.DisplayMember = "Nombre";
             cmbrubros.ValueMember = "IdRubro";
-            
 
-        }
-        
-        private void btnstrored_Click(object sender, EventArgs e)
-        {
-            StoredPrecedureFamilia Stored = new StoredPrecedureFamilia();
-            Stored.Insertar();
-        }
 
+        }   
 
     }
 }

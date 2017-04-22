@@ -21,28 +21,25 @@ namespace ControlProductos
             InitializeComponent();
         }
 
-
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
             btnnuevo.Visible = false;
-            CargarCombos();
-                     
+            CargarCombos();  
         }
 
         private void CargarCombos()
         {
-
-            Datos d = new Datos();
-            cmbproveedores.DataSource = d.obtenerProveedores();
+            Datos datosCombos = new Datos();
+            //Lleno los combos con las funciones que devuelven las listas
+            cmbproveedores.DataSource = datosCombos.obtenerProveedores();
+            //Asigno el Nombre para que se vea en el combo y el id como valor cuando selecciona 
             cmbproveedores.DisplayMember = "Nombre";
             cmbproveedores.ValueMember = "Id";
-
-
-            cmbfamilias.DataSource = d.obtenerFamilia();
+            cmbfamilias.DataSource = datosCombos.obtenerFamilia();
             cmbfamilias.DisplayMember = "Nombre";
             cmbfamilias.ValueMember = "IdFamilia";
         }
-        
+
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             NuevoProducto iniciar = new NuevoProducto();
@@ -60,10 +57,8 @@ namespace ControlProductos
         private void btverprod_Click(object sender, EventArgs e)
         {
             btnnuevo.Visible = true;
-
             Datos datosOb = new Datos();
             gvproductos.DataSource = datosOb.cargarGrilla();
-
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -73,17 +68,11 @@ namespace ControlProductos
 
         private void cmbfamilia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // cmbrubros.Items.Clear();
-            Datos d = new Datos();
-            //Familia familia = (Familia) cmbfamilias.SelectedValue;
-
-            cmbrubros.DataSource = d.obtenerRubro((int)cmbfamilias.SelectedValue);
+            Datos datosRubros = new Datos();
+            cmbrubros.DataSource = datosRubros.obtenerRubro((int)cmbfamilias.SelectedValue);
             cmbrubros.DisplayMember = "Nombre";
             cmbrubros.ValueMember = "IdRubro";
         }
-
-
-  
     }
 
             

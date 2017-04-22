@@ -15,33 +15,34 @@ namespace ControlProductos
         protected SqlConnection cnn;
         protected SqlCommand comandosql;
         protected String mensaje;
-        public ControlDeProductosDataSet dataset = new ControlDeProductosDataSet();
         public SqlDataAdapter adaptersql;
-        public SqlDataReader dr;
-        public SqlDataReader dr2;
-        public SqlDataReader dr3;
+
         public Conexion()
         {
+            //Realizo el string con la conexion en mi BD , Source tiene que ser el nombre de mmi servicio
+            //y Catalog el nombre de mi BD
             this.conexiones = (@"Data source=(local);Initial Catalog = ControlDeProductos; integrated security = True");
             this.cnn = new SqlConnection(this.conexiones);
 
         }
-        public void Conectar()
+            // Cada vez que llamo esta funcion realizo la conexion con mi BD
+            public void Conectar()
         {
             this.cnn.Open();
         }
 
-        public void Desconectar()
-        {
-            this.cnn.Close();
-        }
+            // Cada vez que llamo esta funcion realizo la desconexion con mi BD
+            public void Desconectar()
+            {
+                this.cnn.Close();
+            }
 
-        public String Mensaje
-        {
-            get {
-                return this.mensaje;
-                  }
-        }
+            public String Mensaje
+            {
+                get {
+                    return this.mensaje;
+                      }
+            }
 
-    }
+     }
 }

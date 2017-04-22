@@ -50,7 +50,6 @@
             this.txbprecio = new System.Windows.Forms.TextBox();
             this.txbmarca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnstrored = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btneditar
@@ -224,6 +223,7 @@
             this.cmbfamilias.Name = "cmbfamilias";
             this.cmbfamilias.Size = new System.Drawing.Size(160, 24);
             this.cmbfamilias.TabIndex = 18;
+            this.cmbfamilias.SelectedIndexChanged += new System.EventHandler(this.cmbfamilias_SelectedIndexChanged);
             // 
             // lblmarca
             // 
@@ -274,23 +274,12 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "$";
             // 
-            // btnstrored
-            // 
-            this.btnstrored.Location = new System.Drawing.Point(13, 1);
-            this.btnstrored.Name = "btnstrored";
-            this.btnstrored.Size = new System.Drawing.Size(104, 23);
-            this.btnstrored.TabIndex = 24;
-            this.btnstrored.Text = "StoredPrueba";
-            this.btnstrored.UseVisualStyleBackColor = true;
-            this.btnstrored.Click += new System.EventHandler(this.btnstrored_Click);
-            // 
             // NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(616, 395);
-            this.Controls.Add(this.btnstrored);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbmarca);
             this.Controls.Add(this.txbprecio);
@@ -346,6 +335,5 @@
         private System.Windows.Forms.TextBox txbprecio;
         private System.Windows.Forms.TextBox txbmarca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnstrored;
     }
 }

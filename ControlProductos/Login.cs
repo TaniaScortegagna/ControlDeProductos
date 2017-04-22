@@ -23,12 +23,10 @@ namespace ControlProductos
             UsuarioOb.Usuario = this.txtuser.Text;
             UsuarioOb.Contraseña = this.txtpass.Text;
             if (UsuarioOb.Buscar()== true)
-            {
-                
+            {                
                 MenuPrincipal iniciar = new MenuPrincipal();
                 iniciar.Show();
                 this.Hide();
-
             }
             else
                 MessageBox.Show(UsuarioOb.Mensaje,"ERROR");
