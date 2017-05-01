@@ -16,5 +16,12 @@ namespace ControlProductos
         {
             InitializeComponent();
         }
+
+        private void btnadminproductos_Click(object sender, EventArgs e)
+        {
+            AdministrarProducto AdminProd = new AdministrarProducto();
+            AdminProd.Show();
+            this.Close();
+        }
     }
 }

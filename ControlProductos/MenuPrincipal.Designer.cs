@@ -29,55 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.btnadminproductos = new System.Windows.Forms.Button();
-            this.btnadminfamilias = new System.Windows.Forms.Button();
-            this.btnadminrubros = new System.Windows.Forms.Button();
             this.btnadminproveedores = new System.Windows.Forms.Button();
+            this.btnadminrubros = new System.Windows.Forms.Button();
+            this.btnadminfamilias = new System.Windows.Forms.Button();
+            this.btnadminproductos = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnadminproductos
-            // 
-            this.btnadminproductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadminproductos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnadminproductos.Location = new System.Drawing.Point(41, 44);
-            this.btnadminproductos.Name = "btnadminproductos";
-            this.btnadminproductos.Size = new System.Drawing.Size(289, 115);
-            this.btnadminproductos.TabIndex = 0;
-            this.btnadminproductos.Text = "Administrar Productos";
-            this.btnadminproductos.UseVisualStyleBackColor = true;
-            // 
-            // btnadminfamilias
-            // 
-            this.btnadminfamilias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadminfamilias.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnadminfamilias.Location = new System.Drawing.Point(379, 44);
-            this.btnadminfamilias.Name = "btnadminfamilias";
-            this.btnadminfamilias.Size = new System.Drawing.Size(289, 115);
-            this.btnadminfamilias.TabIndex = 1;
-            this.btnadminfamilias.Text = "Administrar Familias";
-            this.btnadminfamilias.UseVisualStyleBackColor = true;
-            // 
-            // btnadminrubros
-            // 
-            this.btnadminrubros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadminrubros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnadminrubros.Location = new System.Drawing.Point(41, 199);
-            this.btnadminrubros.Name = "btnadminrubros";
-            this.btnadminrubros.Size = new System.Drawing.Size(289, 115);
-            this.btnadminrubros.TabIndex = 2;
-            this.btnadminrubros.Text = "Administrar Rubros";
-            this.btnadminrubros.UseVisualStyleBackColor = true;
             // 
             // btnadminproveedores
             // 
             this.btnadminproveedores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadminproveedores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminproveedores.Image = global::ControlProductos.Properties.Resources.AdmPrv;
             this.btnadminproveedores.Location = new System.Drawing.Point(379, 199);
             this.btnadminproveedores.Name = "btnadminproveedores";
             this.btnadminproveedores.Size = new System.Drawing.Size(289, 115);
             this.btnadminproveedores.TabIndex = 3;
             this.btnadminproveedores.Text = "Administrar Proveedores";
+            this.btnadminproveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnadminproveedores.UseVisualStyleBackColor = true;
+            // 
+            // btnadminrubros
+            // 
+            this.btnadminrubros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminrubros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminrubros.Image = global::ControlProductos.Properties.Resources.AdmRubros;
+            this.btnadminrubros.Location = new System.Drawing.Point(41, 199);
+            this.btnadminrubros.Name = "btnadminrubros";
+            this.btnadminrubros.Size = new System.Drawing.Size(289, 115);
+            this.btnadminrubros.TabIndex = 2;
+            this.btnadminrubros.Text = "Administrar Rubros";
+            this.btnadminrubros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnadminrubros.UseVisualStyleBackColor = true;
+            // 
+            // btnadminfamilias
+            // 
+            this.btnadminfamilias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminfamilias.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminfamilias.Image = global::ControlProductos.Properties.Resources.AdmFlia;
+            this.btnadminfamilias.Location = new System.Drawing.Point(379, 44);
+            this.btnadminfamilias.Name = "btnadminfamilias";
+            this.btnadminfamilias.Size = new System.Drawing.Size(289, 115);
+            this.btnadminfamilias.TabIndex = 1;
+            this.btnadminfamilias.Text = "Administrar Familias";
+            this.btnadminfamilias.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnadminfamilias.UseVisualStyleBackColor = true;
+            // 
+            // btnadminproductos
+            // 
+            this.btnadminproductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminproductos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminproductos.Image = global::ControlProductos.Properties.Resources.AdmProd;
+            this.btnadminproductos.Location = new System.Drawing.Point(41, 44);
+            this.btnadminproductos.Name = "btnadminproductos";
+            this.btnadminproductos.Size = new System.Drawing.Size(289, 115);
+            this.btnadminproductos.TabIndex = 0;
+            this.btnadminproductos.Text = "Administrar Productos";
+            this.btnadminproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnadminproductos.UseVisualStyleBackColor = true;
+            this.btnadminproductos.Click += new System.EventHandler(this.btnadminproductos_Click);
             // 
             // MenuPrincipal
             // 

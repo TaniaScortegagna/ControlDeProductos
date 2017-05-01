@@ -19,12 +19,12 @@ namespace ControlProductos
             string pConsulta = string.Format("SELECT IdProv,Nombre FROM Proveedores");
             DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
 
-            for (int x = 0; x < resultado.Rows.Count; x++){
-
-                Proveedor pProveedor = new Proveedor();
-                pProveedor.Id = Convert.ToInt32(resultado.Rows[x]["IdProv"]);
-                pProveedor.Nombre = resultado.Rows[x]["Nombre"].ToString();
-                listaProveedores.Add(pProveedor);
+            for (int x = 0; x < resultado.Rows.Count; x++)
+            {
+                Proveedor oProveedor = new Proveedor();
+                oProveedor.Id = Convert.ToInt32(resultado.Rows[x]["IdProv"]);
+                oProveedor.Nombre = resultado.Rows[x]["Nombre"].ToString();
+                listaProveedores.Add(oProveedor);
 
             }
 

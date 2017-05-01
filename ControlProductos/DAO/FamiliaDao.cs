@@ -24,10 +24,10 @@ namespace ControlProductos
             for (int x = 0; x < resultado.Rows.Count; x++)
             {
 
-                Familia pFamilia = new Familia();
-                pFamilia.Id = Convert.ToInt32(resultado.Rows[x]["IdFamilia"]);
-                pFamilia.Nombre = resultado.Rows[x]["Nombre"].ToString();
-                listaFamilias.Add(pFamilia);
+                Familia oFamilia = new Familia();
+                oFamilia.Id = Convert.ToInt32(resultado.Rows[x]["IdFamilia"]);
+                oFamilia.Nombre = resultado.Rows[x]["Nombre"].ToString();
+                listaFamilias.Add(oFamilia);
              }         
 
             cnn.Desconectar();

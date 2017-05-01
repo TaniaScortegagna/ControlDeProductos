@@ -17,8 +17,7 @@ namespace ControlProductos
         {
             bool Resultado = false;
             Conexion cnn = new Conexion();
-            string pConsulta = string.Format("abmProductos");
-                
+            string pConsulta = string.Format("abmProductos");                
             cnn.AgregarParametro("@Codigo",pproducto.codigo.ToString(),SqlDbType.Int);
             cnn.AgregarParametro("@Nombre", pproducto.nombre, SqlDbType.NChar);
             cnn.AgregarParametro("@Descripcion", pproducto.descripcion, SqlDbType.NChar);
@@ -30,6 +29,13 @@ namespace ControlProductos
             Resultado = cnn.EjecutarNonQuery(pConsulta, CommandType.StoredProcedure);
             return Resultado;
 
+        }
+        public DataTable consultarProductos()
+        {
+            Conexion cnn = new Conexion();
+            string pConsulta = string.Format("SELECT * FROM Productos");
+            DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
+            return resultado;
         }
 
     }

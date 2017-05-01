@@ -43,8 +43,8 @@ namespace ControlProductos
         {
             cmbrubros.DataSource = null;
             cmbrubros.Items.Clear();           
-            RubroDao pRubro = new RubroDao();
-            cmbrubros.DataSource = pRubro.obtenerRubro(((Familia)cmbfamilias.SelectedItem).Id);
+            RubroDao oRubro = new RubroDao();
+            cmbrubros.DataSource = oRubro.obtenerRubro(((Familia)cmbfamilias.SelectedItem).Id);
             cmbrubros.DisplayMember = "Nombre";
             cmbrubros.ValueMember = "Id";
 
@@ -63,15 +63,15 @@ namespace ControlProductos
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            Producto pProducto = new Producto();
-            pProducto.nombre = txbnombre.Text;
-            pProducto.descripcion = txbdescripcion.Text;
-            pProducto.marca = txbmarca.Text;
-            pProducto.proveedor = (int)cmbproveedores.SelectedValue;
-            pProducto.rubro = (int)cmbrubros.SelectedValue;
-            pProducto.precio = Convert.ToDecimal(txbprecio.Text);
-            ProductoDao pProductoDao = new ProductoDao();
-            if (pProductoDao.altaProducto(pProducto))
+            Producto oProducto = new Producto();
+            oProducto.nombre = txbnombre.Text;
+            oProducto.descripcion = txbdescripcion.Text;
+            oProducto.marca = txbmarca.Text;
+            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
+            oProducto.rubro = (int)cmbrubros.SelectedValue;
+            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
+            ProductoDao oProductoDao = new ProductoDao();
+            if (oProductoDao.altaProducto(oProducto))
               {
                     DialogResult guardado = MessageBox.Show("DATOS GUARDADOS, ¿Desea cargar un nuevo producto?","CORRECTO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (guardado == DialogResult.Yes)
@@ -89,6 +89,13 @@ namespace ControlProductos
                 {
                      MessageBox.Show( "Datos Incorrectos", "Error");
                 }
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AdministrarProducto AdminProd = new AdministrarProducto();
+            AdminProd.Show();
         }
     }
 }

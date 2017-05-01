@@ -42,21 +42,21 @@
             this.btnaceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaceptar.Location = new System.Drawing.Point(33, 112);
             this.btnaceptar.Name = "btnaceptar";
-            this.btnaceptar.Size = new System.Drawing.Size(83, 23);
+            this.btnaceptar.Size = new System.Drawing.Size(91, 27);
             this.btnaceptar.TabIndex = 0;
             this.btnaceptar.Text = "Aceptar";
             this.btnaceptar.UseVisualStyleBackColor = true;
-            this.btnaceptar.Click += new System.EventHandler(this.btnaceptar_Click);
-            // 
+            this.btnaceptar.Click += new System.EventHandler(this.btnaceptar_Click);            // 
             // btncancelar
             // 
             this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.Location = new System.Drawing.Point(167, 112);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(83, 23);
+            this.btncancelar.Size = new System.Drawing.Size(91, 27);
             this.btncancelar.TabIndex = 1;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // lblusuario
             // 
@@ -80,16 +80,21 @@
             // 
             // txbusuario
             // 
-            this.txbusuario.Location = new System.Drawing.Point(118, 36);
+            this.txbusuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbusuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbusuario.Location = new System.Drawing.Point(106, 34);
             this.txbusuario.Name = "txbusuario";
-            this.txbusuario.Size = new System.Drawing.Size(132, 20);
+            this.txbusuario.Size = new System.Drawing.Size(132, 23);
             this.txbusuario.TabIndex = 4;
             // 
             // txbclave
             // 
-            this.txbclave.Location = new System.Drawing.Point(118, 74);
+            this.txbclave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbclave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbclave.Location = new System.Drawing.Point(106, 72);
             this.txbclave.Name = "txbclave";
-            this.txbclave.Size = new System.Drawing.Size(132, 20);
+            this.txbclave.PasswordChar = '*';
+            this.txbclave.Size = new System.Drawing.Size(132, 23);
             this.txbclave.TabIndex = 5;
             // 
             // Login

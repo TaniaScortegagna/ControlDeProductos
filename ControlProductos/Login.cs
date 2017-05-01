@@ -30,8 +30,16 @@ namespace ControlProductos
 
             }
             else
-                MessageBox.Show("Error login", "ERROR");
+                MessageBox.Show("DATOS INCORRECTOS", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+         
         }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+                this.Close();
+            
+        }
+
 
 
     }
