@@ -29,85 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.btnadmprov = new System.Windows.Forms.Button();
-            this.btnadmflia = new System.Windows.Forms.Button();
-            this.btnadmrubro = new System.Windows.Forms.Button();
-            this.btnadmprod = new System.Windows.Forms.Button();
+            this.btnadminproductos = new System.Windows.Forms.Button();
+            this.btnadminfamilias = new System.Windows.Forms.Button();
+            this.btnadminrubros = new System.Windows.Forms.Button();
+            this.btnadminproveedores = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnadmprov
+            // btnadminproductos
             // 
-            this.btnadmprov.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnadmprov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnadmprov.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadmprov.Image = global::ControlProductos.Properties.Resources.AdmPrv;
-            this.btnadmprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnadmprov.Location = new System.Drawing.Point(361, 185);
-            this.btnadmprov.Name = "btnadmprov";
-            this.btnadmprov.Size = new System.Drawing.Size(309, 94);
-            this.btnadmprov.TabIndex = 3;
-            this.btnadmprov.Text = "Administrar Proveedores";
-            this.btnadmprov.UseVisualStyleBackColor = false;
+            this.btnadminproductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminproductos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminproductos.Location = new System.Drawing.Point(41, 44);
+            this.btnadminproductos.Name = "btnadminproductos";
+            this.btnadminproductos.Size = new System.Drawing.Size(289, 115);
+            this.btnadminproductos.TabIndex = 0;
+            this.btnadminproductos.Text = "Administrar Productos";
+            this.btnadminproductos.UseVisualStyleBackColor = true;
             // 
-            // btnadmflia
+            // btnadminfamilias
             // 
-            this.btnadmflia.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnadmflia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnadmflia.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadmflia.Image = global::ControlProductos.Properties.Resources.AdmFlia;
-            this.btnadmflia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnadmflia.Location = new System.Drawing.Point(361, 53);
-            this.btnadmflia.Name = "btnadmflia";
-            this.btnadmflia.Size = new System.Drawing.Size(309, 94);
-            this.btnadmflia.TabIndex = 2;
-            this.btnadmflia.Text = "Administrar Familias";
-            this.btnadmflia.UseVisualStyleBackColor = false;
+            this.btnadminfamilias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminfamilias.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminfamilias.Location = new System.Drawing.Point(379, 44);
+            this.btnadminfamilias.Name = "btnadminfamilias";
+            this.btnadminfamilias.Size = new System.Drawing.Size(289, 115);
+            this.btnadminfamilias.TabIndex = 1;
+            this.btnadminfamilias.Text = "Administrar Familias";
+            this.btnadminfamilias.UseVisualStyleBackColor = true;
             // 
-            // btnadmrubro
+            // btnadminrubros
             // 
-            this.btnadmrubro.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnadmrubro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnadmrubro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadmrubro.Image = global::ControlProductos.Properties.Resources.AdmRubros;
-            this.btnadmrubro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnadmrubro.Location = new System.Drawing.Point(15, 185);
-            this.btnadmrubro.Name = "btnadmrubro";
-            this.btnadmrubro.Size = new System.Drawing.Size(309, 94);
-            this.btnadmrubro.TabIndex = 1;
-            this.btnadmrubro.Text = "Administrar Rubros";
-            this.btnadmrubro.UseVisualStyleBackColor = false;
+            this.btnadminrubros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminrubros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminrubros.Location = new System.Drawing.Point(41, 199);
+            this.btnadminrubros.Name = "btnadminrubros";
+            this.btnadminrubros.Size = new System.Drawing.Size(289, 115);
+            this.btnadminrubros.TabIndex = 2;
+            this.btnadminrubros.Text = "Administrar Rubros";
+            this.btnadminrubros.UseVisualStyleBackColor = true;
             // 
-            // btnadmprod
+            // btnadminproveedores
             // 
-            this.btnadmprod.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnadmprod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnadmprod.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadmprod.Image = global::ControlProductos.Properties.Resources.AdmProd;
-            this.btnadmprod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnadmprod.Location = new System.Drawing.Point(15, 54);
-            this.btnadmprod.Name = "btnadmprod";
-            this.btnadmprod.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnadmprod.Size = new System.Drawing.Size(309, 94);
-            this.btnadmprod.TabIndex = 0;
-            this.btnadmprod.Text = "Administrar Producto";
-            this.btnadmprod.UseVisualStyleBackColor = false;
-            this.btnadmprod.Click += new System.EventHandler(this.btnadmprod_Click);
+            this.btnadminproveedores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadminproveedores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnadminproveedores.Location = new System.Drawing.Point(379, 199);
+            this.btnadminproveedores.Name = "btnadminproveedores";
+            this.btnadminproveedores.Size = new System.Drawing.Size(289, 115);
+            this.btnadminproveedores.TabIndex = 3;
+            this.btnadminproveedores.Text = "Administrar Proveedores";
+            this.btnadminproveedores.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(682, 311);
-            this.Controls.Add(this.btnadmprov);
-            this.Controls.Add(this.btnadmflia);
-            this.Controls.Add(this.btnadmrubro);
-            this.Controls.Add(this.btnadmprod);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(724, 347);
+            this.Controls.Add(this.btnadminproveedores);
+            this.Controls.Add(this.btnadminrubros);
+            this.Controls.Add(this.btnadminfamilias);
+            this.Controls.Add(this.btnadminproductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.ResumeLayout(false);
 
@@ -115,9 +98,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnadmprod;
-        private System.Windows.Forms.Button btnadmrubro;
-        private System.Windows.Forms.Button btnadmflia;
-        private System.Windows.Forms.Button btnadmprov;
+        private System.Windows.Forms.Button btnadminproductos;
+        private System.Windows.Forms.Button btnadminfamilias;
+        private System.Windows.Forms.Button btnadminrubros;
+        private System.Windows.Forms.Button btnadminproveedores;
     }
 }

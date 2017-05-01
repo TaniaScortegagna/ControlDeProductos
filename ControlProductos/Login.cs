@@ -19,22 +19,18 @@ namespace ControlProductos
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-            Usuarios UsuarioOb = new Usuarios();
-            UsuarioOb.Usuario = this.txtuser.Text;
-            UsuarioOb.Contraseña = this.txtpass.Text;
-            if (UsuarioOb.Buscar()== true)
-            {                
+            UsuarioDao UsuarioOb = new UsuarioDao();
+
+            if (UsuarioOb.BuscarUsuario(this.txbusuario.Text, this.txbclave.Text) == true)
+            {
+
                 MenuPrincipal iniciar = new MenuPrincipal();
                 iniciar.Show();
                 this.Hide();
+
             }
             else
-                MessageBox.Show(UsuarioOb.Mensaje,"ERROR");
-        }
-       
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
+                MessageBox.Show("Error login", "ERROR");
         }
 
 
