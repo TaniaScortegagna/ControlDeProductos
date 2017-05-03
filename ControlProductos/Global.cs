@@ -19,7 +19,7 @@ namespace ControlProductos
             }
         public string obtenerConexion()
         {
-            oXml.Load("C:\\Config.xml");
+            oXml.Load("C:\\ConexionBD\\Config.xml");
             XmlNodeList oNodo = oXml.GetElementsByTagName("Conexion");
             this.CadenaDeConexionBd = oNodo[0].InnerText;
             return this.CadenaDeConexionBd;
