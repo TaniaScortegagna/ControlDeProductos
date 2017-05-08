@@ -162,7 +162,7 @@
             this.cmbproveedores.FormattingEnabled = true;
             this.cmbproveedores.Location = new System.Drawing.Point(374, 45);
             this.cmbproveedores.Name = "cmbproveedores";
-            this.cmbproveedores.Size = new System.Drawing.Size(121, 21);
+            this.cmbproveedores.Size = new System.Drawing.Size(128, 21);
             this.cmbproveedores.TabIndex = 12;
             // 
             // cmbfamilias
@@ -170,7 +170,7 @@
             this.cmbfamilias.FormattingEnabled = true;
             this.cmbfamilias.Location = new System.Drawing.Point(374, 96);
             this.cmbfamilias.Name = "cmbfamilias";
-            this.cmbfamilias.Size = new System.Drawing.Size(121, 21);
+            this.cmbfamilias.Size = new System.Drawing.Size(128, 21);
             this.cmbfamilias.TabIndex = 13;
             this.cmbfamilias.SelectedIndexChanged += new System.EventHandler(this.cmbfamilias_SelectedIndexChanged);
             // 
@@ -179,14 +179,14 @@
             this.cmbrubros.FormattingEnabled = true;
             this.cmbrubros.Location = new System.Drawing.Point(374, 155);
             this.cmbrubros.Name = "cmbrubros";
-            this.cmbrubros.Size = new System.Drawing.Size(121, 21);
+            this.cmbrubros.Size = new System.Drawing.Size(128, 21);
             this.cmbrubros.TabIndex = 14;
             // 
             // txbprecio
             // 
             this.txbprecio.Location = new System.Drawing.Point(374, 213);
             this.txbprecio.Name = "txbprecio";
-            this.txbprecio.Size = new System.Drawing.Size(121, 20);
+            this.txbprecio.Size = new System.Drawing.Size(128, 20);
             this.txbprecio.TabIndex = 15;
             // 
             // btncancelar
@@ -221,6 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(580, 328);
+            this.Controls.Add(this.txbnombre);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.txbprecio);
@@ -229,7 +230,6 @@
             this.Controls.Add(this.cmbproveedores);
             this.Controls.Add(this.txbmarca);
             this.Controls.Add(this.txbdescripcion);
-            this.Controls.Add(this.txbnombre);
             this.Controls.Add(this.txbcodigo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -250,23 +250,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbcodigo;
-        private System.Windows.Forms.TextBox txbnombre;
-        private System.Windows.Forms.TextBox txbdescripcion;
-        private System.Windows.Forms.TextBox txbmarca;
-        private System.Windows.Forms.ComboBox cmbproveedores;
-        private System.Windows.Forms.ComboBox cmbfamilias;
-        private System.Windows.Forms.ComboBox cmbrubros;
-        private System.Windows.Forms.TextBox txbprecio;
-        private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.Button btncancelar;
+        public System.Windows.Forms.TextBox txbcodigo;
+        public System.Windows.Forms.TextBox txbnombre;
+        public System.Windows.Forms.TextBox txbdescripcion;
+        public System.Windows.Forms.TextBox txbmarca;
+        public System.Windows.Forms.ComboBox cmbproveedores;
+        public System.Windows.Forms.ComboBox cmbfamilias;
+        public System.Windows.Forms.ComboBox cmbrubros;
+        public System.Windows.Forms.TextBox txbprecio;
+        public System.Windows.Forms.Button btnguardar;
+        public System.Windows.Forms.Button btncancelar;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label8;
     }
 }

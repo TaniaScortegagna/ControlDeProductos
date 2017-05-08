@@ -41,17 +41,25 @@
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.btnproductos = new System.Windows.Forms.Button();
+            this.btneditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvproveedores
             // 
+            this.dgvproveedores.AllowUserToAddRows = false;
+            this.dgvproveedores.AllowUserToDeleteRows = false;
+            this.dgvproveedores.AllowUserToResizeColumns = false;
+            this.dgvproveedores.AllowUserToResizeRows = false;
             this.dgvproveedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvproveedores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvproveedores.Location = new System.Drawing.Point(23, 97);
             this.dgvproveedores.Name = "dgvproveedores";
+            this.dgvproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvproveedores.Size = new System.Drawing.Size(821, 297);
             this.dgvproveedores.TabIndex = 0;
+            this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
             // 
             // cmbfamilias
             // 
@@ -168,12 +176,23 @@
             this.btnproductos.UseVisualStyleBackColor = false;
             this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
             // 
+            // btneditar
+            // 
+            this.btneditar.Location = new System.Drawing.Point(855, 233);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(88, 34);
+            this.btneditar.TabIndex = 12;
+            this.btneditar.Text = "Editar";
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
+            // 
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 403);
+            this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.lblbuscar);
@@ -210,5 +229,6 @@
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnvolver;
+        private System.Windows.Forms.Button btneditar;
     }
 }
