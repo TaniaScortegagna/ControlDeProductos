@@ -37,7 +37,6 @@ namespace ControlProductos
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
             CargarCombos();
-            btneditar.Hide();
         }
 
         private void CargarCombos()
@@ -67,18 +66,6 @@ namespace ControlProductos
             MenuPrincipal MenuPrin = new MenuPrincipal();
             MenuPrin.Show();
             this.Close();
-        }
-
-        private void dgvproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btneditar.Show();
-        }
-
-        private void btneditar_Click(object sender, EventArgs e)
-        {
-            ProductoABM oProducto = new ProductoABM();
-            oProducto.Show();
-            this.Hide();
         }
     }
 }
