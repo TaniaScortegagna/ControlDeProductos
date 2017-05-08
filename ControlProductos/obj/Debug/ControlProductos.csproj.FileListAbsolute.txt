@@ -10,3 +10,15 @@ c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlPro
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.Login.resources
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.MenuPrincipal.resources
 c:\users\tania\documents\visual studio 2012\Projects\ControlProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABM.resources
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe.config
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.exe
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.pdb
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.pdb
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csprojResolveAssemblyReference.cache
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.AdministrarProducto.resources
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Login.resources
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.MenuPrincipal.resources
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABM.resources
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
+C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache

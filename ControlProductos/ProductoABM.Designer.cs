@@ -135,6 +135,7 @@
             this.txbcodigo.Name = "txbcodigo";
             this.txbcodigo.Size = new System.Drawing.Size(128, 20);
             this.txbcodigo.TabIndex = 8;
+
             // 
             // txbnombre
             // 
