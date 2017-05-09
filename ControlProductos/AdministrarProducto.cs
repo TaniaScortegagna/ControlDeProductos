@@ -73,6 +73,14 @@ namespace ControlProductos
         {
             if (this.dgvproveedores.CurrentCell.Selected);
             btneditar.Show();
+
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            ProductoABM oProducto = new ProductoABM();
+            oProducto.Show();
+            this.Hide();
         }
     }
 }
