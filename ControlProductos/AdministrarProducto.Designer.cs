@@ -42,6 +42,7 @@
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.btnproductos = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,12 +197,27 @@
             this.btnproductos.UseVisualStyleBackColor = false;
             this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnbuscar.Image = global::ControlProductos.Properties.Resources.verProductos;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbuscar.Location = new System.Drawing.Point(799, 47);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(94, 38);
+            this.btnbuscar.TabIndex = 13;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 403);
+            this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnnuevo);
@@ -240,5 +256,6 @@
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnvolver;
         private System.Windows.Forms.Button btneditar;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

@@ -34,3 +34,15 @@ C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\Con
 C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABM.resources
 C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
 C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
+D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe.config
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.exe
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.pdb
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csprojResolveAssemblyReference.cache
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.AdministrarProducto.resources
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Login.resources
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.MenuPrincipal.resources
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABM.resources
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
+D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
+D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe
+D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.pdb
