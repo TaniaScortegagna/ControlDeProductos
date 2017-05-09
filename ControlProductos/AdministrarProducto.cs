@@ -71,7 +71,8 @@ namespace ControlProductos
 
         private void dgvproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-       //     if(dgvproveedores.CellClick
+            if (this.dgvproveedores.CurrentCell.Selected);
+            btneditar.Show();
         }
     }
 }
