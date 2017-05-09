@@ -16,7 +16,7 @@ namespace ControlProductos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductoABM());
+            Application.Run(new AdministrarProducto());
         }
     }
 }

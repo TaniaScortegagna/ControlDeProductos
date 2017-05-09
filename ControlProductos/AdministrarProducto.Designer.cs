@@ -38,6 +38,7 @@
             this.lblrubro = new System.Windows.Forms.Label();
             this.lblproveedor = new System.Windows.Forms.Label();
             this.lblbuscar = new System.Windows.Forms.Label();
+            this.btneditar = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.btnproductos = new System.Windows.Forms.Button();
@@ -46,12 +47,22 @@
             // 
             // dgvproveedores
             // 
+            this.dgvproveedores.AllowUserToAddRows = false;
+            this.dgvproveedores.AllowUserToDeleteRows = false;
+            this.dgvproveedores.AllowUserToOrderColumns = true;
+            this.dgvproveedores.AllowUserToResizeColumns = false;
+            this.dgvproveedores.AllowUserToResizeRows = false;
             this.dgvproveedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvproveedores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvproveedores.Location = new System.Drawing.Point(23, 97);
+            this.dgvproveedores.MultiSelect = false;
             this.dgvproveedores.Name = "dgvproveedores";
+            this.dgvproveedores.ReadOnly = true;
+            this.dgvproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvproveedores.Size = new System.Drawing.Size(821, 297);
             this.dgvproveedores.TabIndex = 0;
+            this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
             // 
             // cmbfamilias
             // 
@@ -128,6 +139,19 @@
             this.lblbuscar.TabIndex = 9;
             this.lblbuscar.Text = "Buscar:";
             // 
+            // btneditar
+            // 
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btneditar.Image = global::ControlProductos.Properties.Resources.editar;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneditar.Location = new System.Drawing.Point(850, 221);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(94, 38);
+            this.btneditar.TabIndex = 12;
+            this.btneditar.Text = "Editar";
+            this.btneditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneditar.UseVisualStyleBackColor = true;
+            // 
             // btnvolver
             // 
             this.btnvolver.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,6 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 403);
+            this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.lblbuscar);
@@ -213,5 +238,6 @@
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnvolver;
+        private System.Windows.Forms.Button btneditar;
     }
 }

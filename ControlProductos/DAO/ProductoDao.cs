@@ -38,12 +38,12 @@ namespace ControlProductos
             DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
             return resultado;
         }
-        public int proxCod()
-        {
-            Conexion cnn = new Conexion();
-            string pConsulta = string.Format("consultaIdProducto");
-            int resultado = Convert.ToInt32(cnn.TraerValor(pConsulta));
-            return resultado + 1;
-        }
+        //public int proxCod()
+        //{
+        //    Conexion cnn = new Conexion();
+        //    string pConsulta = string.Format("consultaIdProducto");
+        //    int resultado = Convert.ToInt32(cnn.TraerValor(pConsulta));
+        //    return resultado + 1;
+        //}
     }
 }

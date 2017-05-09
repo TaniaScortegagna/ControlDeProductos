@@ -22,3 +22,15 @@ C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\Co
 C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABM.resources
 C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
 C:\Users\Tania\Documents\GitHub\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe.config
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.exe
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.pdb
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.pdb
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csprojResolveAssemblyReference.cache
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.AdministrarProducto.resources
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Login.resources
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.MenuPrincipal.resources
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABM.resources
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Properties.Resources.resources
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache

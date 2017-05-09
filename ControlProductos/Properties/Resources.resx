@@ -127,6 +127,9 @@
   <data name="AdmProd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\AdmProd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AdmRubros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\AdmRubros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +145,7 @@
   <data name="AdmFlia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\AdmFlia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

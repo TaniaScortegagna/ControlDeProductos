@@ -20,8 +20,8 @@ namespace ControlProductos
         private void ProductoABM_Load(object sender, EventArgs e)
         {
             CargarCombos();
-            ProductoDao oProducto = new ProductoDao();
-            txbcodigo.Text = oProducto.proxCod().ToString();
+            //ProductoDao oProducto = new ProductoDao();
+            //txbcodigo.Text = oProducto.proxCod().ToString();
 
 
         }

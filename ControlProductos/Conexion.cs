@@ -287,35 +287,35 @@ namespace ControlProductos
             return tabla;
         }
 
-        public string TraerValor(string pConsulta)
-        {
-            DataTable tabla = null;
-            DateTime dHoraInicioConsulta = DateTime.Now;
+        //public string TraerValor(string pConsulta)
+        //{
+            //DataTable tabla = null;
+            //DateTime dHoraInicioConsulta = DateTime.Now;
 
-            try
-            {
-                oComando.Connection = oConexion;
-                oComando.CommandType = CommandType.StoredProcedure;
-                oComando.CommandText = pConsulta;
+            //try
+            //{
+            //    oComando.Connection = oConexion;
+            //    oComando.CommandType = CommandType.StoredProcedure;
+            //    oComando.CommandText = pConsulta;
                 
                 
 
-                // El resultado lo guardaremos en una tabla
-                tabla = new DataTable();
-                // Usaremos un DataAdapter para leer los datos
-                SqlDataAdapter oDataAdapter = new SqlDataAdapter(oComando);
-                // Llenamos la tabla con los datos leídos
-                oDataAdapter.Fill(tabla);
+            //    // El resultado lo guardaremos en una tabla
+            //    tabla = new DataTable();
+            //    // Usaremos un DataAdapter para leer los datos
+            //    SqlDataAdapter oDataAdapter = new SqlDataAdapter(oComando);
+            //    // Llenamos la tabla con los datos leídos
+            //    oDataAdapter.Fill(tabla);
 
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+                //throw;
+            //}
 
-            return tabla.Rows[0][0].ToString();
+            //return tabla.Rows[0][0].ToString();
 
-        }
+        //}
         public DataTable EjecutarQueryTexto(string pConsulta)
         {
             DataTable tabla = null;
