@@ -12,11 +12,18 @@ namespace ControlProductos
 {
     public partial class AdministrarProducto : Form
     {
+        public static int _codigo;
+        public static string _descripcion;
+        public string _marca;
+        public string _nombre;
+        public char _precio;
+        public string _proveedor;
+        public string _rubro;
         public AdministrarProducto()
         {
             InitializeComponent();
         }
-
+        
         private void btnproductos_Click(object sender, EventArgs e)
         {
             ProductoDao oProductos = new ProductoDao();
@@ -71,16 +78,31 @@ namespace ControlProductos
 
         private void dgvproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.dgvproveedores.CurrentCell.Selected);
+            if (this.dgvproveedores.CurrentRow.Selected);
             btneditar.Show();
 
         }
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            ProductoABM oProducto = new ProductoABM();
+            ProductoABMEditar PABME = new ProductoABMEditar();
+            //public int _codigo;
+            //public string _descripcion;
+            //public string _marca;
+            //public string _nombre;
+            //public char _precio;
+            //public string _proveedor;
+            //public string _rubro;
+            _codigo = 0001; 
+            _nombre = "Pedro";
+            ProductoABMEditar oProducto = new ProductoABMEditar(_codigo, _nombre);
             oProducto.Show();
-            this.Hide();
+            this.Hide(); 
+        }
+
+        private ProductoABMEditar ProductoABMEditar()
+        {
+            throw new NotImplementedException();
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)

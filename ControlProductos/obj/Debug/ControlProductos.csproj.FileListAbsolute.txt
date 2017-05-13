@@ -46,3 +46,4 @@ D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.Propert
 D:\Github\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.csproj.GenerateResource.Cache
 D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.exe
 D:\Github\ControlDeProductos\ControlProductos\bin\Debug\ControlProductos.pdb
+C:\Users\activa r.l\Documents\Visual Studio 2012\Projects\ControlDeProductos\ControlProductos\obj\Debug\ControlProductos.ProductoABMEditar.resources
