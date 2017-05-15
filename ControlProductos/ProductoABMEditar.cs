@@ -13,10 +13,10 @@ namespace ControlProductos
     public partial class ProductoABMEditar : Form
     {
         AdministrarProducto frmAdminPro = new AdministrarProducto();
-        public ProductoABMEditar(int _codigo, string _nombre)
+        public ProductoABMEditar(string _codigo)
         {
             InitializeComponent();
-        //    this.txbcodigo = _codigo;
+            this.txbcodigo.Text = _codigo;
         //    this.txbnombre = _nombre;
         }
 
@@ -26,7 +26,7 @@ namespace ControlProductos
         }
         private void ProductoABMEditar_Load(object sender, EventArgs e)
         {
-            //txbcodigo = Convert.ToInt16(_codigo);
+            //txbcodigo.Text = _codigo;
             //txbnombre = Convert.ToString(_nombre);
             //txbcodigo.Text = AdministrarProducto.;
             //txbnombre.Text = "Matias";
@@ -77,7 +77,7 @@ namespace ControlProductos
             ProductoDao oProductoDao = new ProductoDao();
             if (oProductoDao.altaProducto(oProducto))
               {
-                    DialogResult guardado = MessageBox.Show("DATOS GUARDADOS CORRECTAMENTE","CORRECTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult guardado = MessageBox.Show("DATOS EDITADOS CORRECTAMENTE","CORRECTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (guardado == DialogResult.OK)
                     {
                         this.Close();

@@ -12,11 +12,11 @@ namespace ControlProductos
 {
     public partial class AdministrarProducto : Form
     {
-        public static int _codigo;
-        public static string _descripcion;
+        public string _codigo;
+        public string _descripcion;
         public string _marca;
         public string _nombre;
-        public char _precio;
+        public string _precio;
         public string _proveedor;
         public string _rubro;
         public AdministrarProducto()
@@ -26,8 +26,8 @@ namespace ControlProductos
         
         private void btnproductos_Click(object sender, EventArgs e)
         {
-            ProductoDao oProductos = new ProductoDao();
-            dgvproveedores.DataSource = oProductos.consultarProductos();
+            //ProductoDao oProductos = new ProductoDao();
+            //dgvproveedores.DataSource = oProductos.consultarProductos();
 
         }
 
@@ -43,6 +43,8 @@ namespace ControlProductos
 
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
+            ProductoDao oProductos = new ProductoDao();
+            dgvproveedores.DataSource = oProductos.consultarProductos();
             CargarCombos();
             btneditar.Hide();
         }
@@ -86,17 +88,17 @@ namespace ControlProductos
         private void btneditar_Click(object sender, EventArgs e)
         {
             ProductoABMEditar PABME = new ProductoABMEditar();
-            //public int _codigo;
+            _codigo = this.dgvproveedores.CurrentRow.Cells[0].Value.ToString();
             //public string _descripcion;
             //public string _marca;
             //public string _nombre;
             //public char _precio;
             //public string _proveedor;
             //public string _rubro;
-            _codigo = 0001; 
-            _nombre = "Pedro";
-            ProductoABMEditar oProducto = new ProductoABMEditar(_codigo, _nombre);
-            oProducto.Show();
+            //_codigo = 0001; 
+            //_nombre = "Pedro";
+            //ProductoABMEditar oProducto = new ProductoABMEditar(_codigo);
+            //oProducto.Show();
             this.Hide(); 
         }
 
