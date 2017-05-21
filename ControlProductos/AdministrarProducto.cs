@@ -89,16 +89,14 @@ namespace ControlProductos
         {
             ProductoABMEditar PABME = new ProductoABMEditar();
             _codigo = this.dgvproveedores.CurrentRow.Cells[0].Value.ToString();
-            //public string _descripcion;
-            //public string _marca;
-            //public string _nombre;
-            //public char _precio;
-            //public string _proveedor;
-            //public string _rubro;
-            //_codigo = 0001; 
-            //_nombre = "Pedro";
-            //ProductoABMEditar oProducto = new ProductoABMEditar(_codigo);
-            //oProducto.Show();
+            _descripcion = this.dgvproveedores.CurrentRow.Cells[1].Value.ToString();
+            _marca = this.dgvproveedores.CurrentRow.Cells[2].Value.ToString();
+            _nombre = this.dgvproveedores.CurrentRow.Cells[3].Value.ToString();
+            _precio = this.dgvproveedores.CurrentRow.Cells[4].Value.ToString();
+            _proveedor = this.dgvproveedores.CurrentRow.Cells[5].Value.ToString();
+            _rubro = this.dgvproveedores.CurrentRow.Cells[6].Value.ToString();  
+            ProductoABMEditar oProducto = new ProductoABMEditar(_codigo, _descripcion, _marca,  _nombre, _precio, _proveedor, _rubro);
+            oProducto.Show();
             this.Hide(); 
         }
 

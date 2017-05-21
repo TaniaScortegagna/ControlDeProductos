@@ -13,11 +13,16 @@ namespace ControlProductos
     public partial class ProductoABMEditar : Form
     {
         AdministrarProducto frmAdminPro = new AdministrarProducto();
-        public ProductoABMEditar(string _codigo)
-        {
+        public ProductoABMEditar(string _codigo, string _descripcion, string _marca, string _nombre, string _precio, string _proveedor, string _rubro)
+        { 
             InitializeComponent();
             this.txbcodigo.Text = _codigo;
-        //    this.txbnombre = _nombre;
+            this.txbdescripcion.Text = _descripcion;
+            this.txbmarca.Text = _marca;
+            this.txbnombre.Text = _nombre;
+            this.txbprecio.Text = _precio;
+            //this.cmbproveedores.DisplayMember = _proveedor;
+            //this.cmbrubro.DisplayMember = _rubro;
         }
 
         public ProductoABMEditar()
@@ -26,13 +31,6 @@ namespace ControlProductos
         }
         private void ProductoABMEditar_Load(object sender, EventArgs e)
         {
-            //txbcodigo.Text = _codigo;
-            //txbnombre = Convert.ToString(_nombre);
-            //txbcodigo.Text = AdministrarProducto.;
-            //txbnombre.Text = "Matias";
-            txbdescripcion.Text = "Genial";
-            txbmarca.Text = "Whirpool";
-            txbprecio.Text = "12,50";
             CargarCombos();
         }
          private void CargarCombos()
