@@ -16,7 +16,11 @@ namespace ControlProductos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD:ControlProductos/Config/Program.cs
             Application.Run(new Login());
+=======
+            Application.Run(new AdministrarProducto());
+>>>>>>> origin/master:ControlProductos/Program.cs
         }
     }
 }

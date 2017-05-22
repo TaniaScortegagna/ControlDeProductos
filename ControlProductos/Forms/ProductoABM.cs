@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace ControlProductos
 {
+
     public partial class ProductoABM : Form
     {
+        AdministrarProducto frmAdminPro = new AdministrarProducto();
         public ProductoABM()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace ControlProductos
 
             btnactualizar.Visible = false;
             CargarCombos();
+<<<<<<< HEAD:ControlProductos/Forms/ProductoABM.cs
             ultimoCodigo();
             
         }
@@ -30,6 +33,12 @@ namespace ControlProductos
         {
             ProductoDao oProducto = new ProductoDao();
             txbcodigo.Text = oProducto.proxCod().ToString();
+=======
+            //ProductoDao oProducto = new ProductoDao();
+            //txbcodigo.Text = oProducto.proxCod().ToString();
+
+
+>>>>>>> origin/master:ControlProductos/ProductoABM.cs
         }
 
         private void CargarCombos()
@@ -161,6 +170,7 @@ namespace ControlProductos
               }
             
         }
+
 
 
 

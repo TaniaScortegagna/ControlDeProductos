@@ -38,22 +38,42 @@
             this.lblrubro = new System.Windows.Forms.Label();
             this.lblproveedor = new System.Windows.Forms.Label();
             this.lblbuscar = new System.Windows.Forms.Label();
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
+=======
+            this.btneditar = new System.Windows.Forms.Button();
+            this.btnvolver = new System.Windows.Forms.Button();
+            this.btnnuevo = new System.Windows.Forms.Button();
+            this.btnproductos = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvproveedores
             // 
+            this.dgvproveedores.AllowUserToAddRows = false;
+            this.dgvproveedores.AllowUserToDeleteRows = false;
+            this.dgvproveedores.AllowUserToOrderColumns = true;
+            this.dgvproveedores.AllowUserToResizeColumns = false;
+            this.dgvproveedores.AllowUserToResizeRows = false;
             this.dgvproveedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvproveedores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvproveedores.Location = new System.Drawing.Point(23, 97);
+            this.dgvproveedores.MultiSelect = false;
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.ReadOnly = true;
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
+=======
+            this.dgvproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
             this.dgvproveedores.Size = new System.Drawing.Size(821, 297);
             this.dgvproveedores.TabIndex = 0;
+            this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
             // 
             // cmbfamilias
             // 
@@ -130,6 +150,7 @@
             this.lblbuscar.TabIndex = 9;
             this.lblbuscar.Text = "Buscar:";
             // 
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
             // btnbuscar
             // 
             this.btnbuscar.Location = new System.Drawing.Point(653, 56);
@@ -143,12 +164,21 @@
             // btneditar
             // 
             this.btneditar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            // btneditar
+            // 
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
             this.btneditar.Image = global::ControlProductos.Properties.Resources.editar;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneditar.Location = new System.Drawing.Point(850, 221);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(94, 38);
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
             this.btneditar.TabIndex = 13;
+=======
+            this.btneditar.TabIndex = 12;
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
             this.btneditar.Text = "Editar";
             this.btneditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btneditar.UseVisualStyleBackColor = true;
@@ -182,14 +212,51 @@
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
+=======
+            // btnproductos
+            // 
+            this.btnproductos.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnproductos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnproductos.Image = global::ControlProductos.Properties.Resources.verProductos;
+            this.btnproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnproductos.Location = new System.Drawing.Point(23, 39);
+            this.btnproductos.Name = "btnproductos";
+            this.btnproductos.Size = new System.Drawing.Size(133, 36);
+            this.btnproductos.TabIndex = 5;
+            this.btnproductos.Text = "Ver Productos";
+            this.btnproductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnproductos.UseVisualStyleBackColor = false;
+            this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnbuscar.Image = global::ControlProductos.Properties.Resources.verProductos;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbuscar.Location = new System.Drawing.Point(799, 47);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(94, 38);
+            this.btnbuscar.TabIndex = 13;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 403);
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnbuscar);
+=======
+            this.Controls.Add(this.btnbuscar);
+            this.Controls.Add(this.btneditar);
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.lblbuscar);
@@ -224,7 +291,12 @@
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnvolver;
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.Designer.cs
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btneditar;
+=======
+        private System.Windows.Forms.Button btneditar;
+        private System.Windows.Forms.Button btnbuscar;
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.Designer.cs
     }
 }

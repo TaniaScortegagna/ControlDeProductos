@@ -12,11 +12,28 @@ namespace ControlProductos
 {
     public partial class AdministrarProducto : Form
     {
+        public string _codigo;
+        public string _descripcion;
+        public string _marca;
+        public string _nombre;
+        public string _precio;
+        public string _proveedor;
+        public string _rubro;
         public AdministrarProducto()
         {
             InitializeComponent();
         }
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.cs
 
+=======
+        
+        private void btnproductos_Click(object sender, EventArgs e)
+        {
+            //ProductoDao oProductos = new ProductoDao();
+            //dgvproveedores.DataSource = oProductos.consultarProductos();
+
+        }
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.cs
 
         private void cmbfamilia_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -30,8 +47,14 @@ namespace ControlProductos
 
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.cs
            
+=======
+            ProductoDao oProductos = new ProductoDao();
+            dgvproveedores.DataSource = oProductos.consultarProductos();
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.cs
             CargarCombos();
+            btneditar.Hide();
         }
 
         private void CargarCombos()
@@ -63,6 +86,7 @@ namespace ControlProductos
             this.Close();
         }
 
+<<<<<<< HEAD:ControlProductos/Forms/AdministrarProducto.cs
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             ProductoDao oProductos = new ProductoDao();
@@ -97,6 +121,41 @@ namespace ControlProductos
             oProducto.precio = Convert.ToDecimal(this.dgvproveedores.CurrentRow.Cells["Precio"].Value.ToString());
 
             return oProducto;
+=======
+        private void dgvproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgvproveedores.CurrentRow.Selected);
+            btneditar.Show();
+
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            ProductoABMEditar PABME = new ProductoABMEditar();
+            _codigo = this.dgvproveedores.CurrentRow.Cells[0].Value.ToString();
+            //public string _descripcion;
+            //public string _marca;
+            //public string _nombre;
+            //public char _precio;
+            //public string _proveedor;
+            //public string _rubro;
+            //_codigo = 0001; 
+            //_nombre = "Pedro";
+            //ProductoABMEditar oProducto = new ProductoABMEditar(_codigo);
+            //oProducto.Show();
+            this.Hide(); 
+        }
+
+        private ProductoABMEditar ProductoABMEditar()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            ProductoDao oBuscarProducto = new ProductoDao();
+            dgvproveedores.DataSource = oBuscarProducto.buscarProducto(txbbuscar.Text);
+>>>>>>> origin/master:ControlProductos/AdministrarProducto.cs
         }
     }
 }
