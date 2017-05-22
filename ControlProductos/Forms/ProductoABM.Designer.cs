@@ -47,6 +47,7 @@
             this.txbprecio = new System.Windows.Forms.TextBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
+            this.btnactualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -135,7 +136,6 @@
             this.txbcodigo.Name = "txbcodigo";
             this.txbcodigo.Size = new System.Drawing.Size(128, 20);
             this.txbcodigo.TabIndex = 8;
-
             // 
             // txbnombre
             // 
@@ -198,7 +198,7 @@
             this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.Image = global::ControlProductos.Properties.Resources.cancelar;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncancelar.Location = new System.Drawing.Point(336, 265);
+            this.btncancelar.Location = new System.Drawing.Point(362, 276);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(133, 40);
             this.btncancelar.TabIndex = 17;
@@ -211,7 +211,7 @@
             this.btnguardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = global::ControlProductos.Properties.Resources.guardar;
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnguardar.Location = new System.Drawing.Point(135, 265);
+            this.btnguardar.Location = new System.Drawing.Point(209, 276);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(133, 40);
             this.btnguardar.TabIndex = 16;
@@ -219,12 +219,26 @@
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
+            // btnactualizar
+            // 
+            this.btnactualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Image = global::ControlProductos.Properties.Resources.guardar;
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Location = new System.Drawing.Point(53, 276);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(133, 40);
+            this.btnactualizar.TabIndex = 18;
+            this.btnactualizar.Text = "Guardar Cambios";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
             // ProductoABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(580, 328);
+            this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.txbprecio);
@@ -272,5 +286,6 @@
         private System.Windows.Forms.TextBox txbprecio;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.Button btnactualizar;
     }
 }

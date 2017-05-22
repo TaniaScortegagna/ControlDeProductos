@@ -19,11 +19,17 @@ namespace ControlProductos
 
         private void ProductoABM_Load(object sender, EventArgs e)
         {
+
+            btnactualizar.Visible = false;
             CargarCombos();
+            ultimoCodigo();
+            
+        }
+
+        private void ultimoCodigo()
+        {
             ProductoDao oProducto = new ProductoDao();
             txbcodigo.Text = oProducto.proxCod().ToString();
-
-
         }
 
         private void CargarCombos()
@@ -63,12 +69,28 @@ namespace ControlProductos
             }
         }
         private void ValidarCampos()
-        { 
+        {
+            foreach (Control validarTextBox in this.Controls)
+            {
+                if (validarTextBox is TextBox)
+                {
+                    if (string.IsNullOrEmpty(txbnombre.Text))
+                    {
+
+                        MessageBox.Show("Debe completar la informacion");
+
+                        return;
+
+                    }
+                }
+            }
+
             
         }
 
-        private void btnguardar_Click(object sender, EventArgs e)
+        public void btnguardar_Click(object sender, EventArgs e)
         {
+            ValidarCampos();
             Producto oProducto = new Producto();
             oProducto.nombre = txbnombre.Text;
             oProducto.descripcion = txbdescripcion.Text;
@@ -103,6 +125,43 @@ namespace ControlProductos
             AdministrarProducto AdminProd = new AdministrarProducto();
             AdminProd.Show();
         }
+        
+        public void llenarForm(Producto oProducto) 
+        {
+           txbnombre.Text = oProducto.nombre;
+           txbdescripcion.Text = oProducto.descripcion;
+           txbmarca.Text= oProducto.marca;
+           cmbproveedores.SelectedValue = oProducto.proveedor;
+           cmbrubros.SelectedValue = oProducto.rubro;
+           txbprecio.Text = oProducto.precio.ToString();
+           
+        
+        }
+
+        public void btnactualizar_Click(object sender, EventArgs e)
+        {
+            ValidarCampos();
+            Producto oProducto = new Producto();
+            oProducto.nombre = txbnombre.Text;
+            oProducto.descripcion = txbdescripcion.Text;
+            oProducto.marca = txbmarca.Text;
+            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
+            oProducto.rubro = (int)cmbrubros.SelectedValue;
+            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
+            ProductoDao oProductoDao = new ProductoDao();
+            
+            if (oProductoDao.actualizarProducto(oProducto))
+             {
+                MessageBox.Show("DATOS ACTUALIZADOS", "CORRECTO");
+                
+             }
+            else
+              {
+                 MessageBox.Show("ERROR AL ACTUALIZADOS", "CORRECTO");
+              }
+            
+        }
+
 
 
     }

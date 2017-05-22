@@ -18,17 +18,16 @@ namespace ControlProductos
             List<Familia> listaFamilias = new List<Familia>();
             Conexion cnn = new Conexion();
 
-            string pConsulta = string.Format("SELECT IdFamilia,Nombre FROM Familias");
-            DataTable resultado = cnn.EjecutarQuery(pConsulta,CommandType.Text);
+            string pConsulta = string.Format("SP_LISTAR_FAMILIAS");
+            DataTable resultado = cnn.EjecutarQuery(pConsulta);
                        
-            for (int x = 0; x < resultado.Rows.Count; x++)
+            foreach (DataRow familia in  resultado.Rows)
             {
-
                 Familia oFamilia = new Familia();
-                oFamilia.Id = Convert.ToInt32(resultado.Rows[x]["IdFamilia"]);
-                oFamilia.Nombre = resultado.Rows[x]["Nombre"].ToString();
+                oFamilia.Id = Convert.ToInt32(familia["IdFamilia"]);
+                oFamilia.Nombre = familia["Nombre"].ToString();
                 listaFamilias.Add(oFamilia);
-             }         
+            }         
 
             cnn.Desconectar();
             return listaFamilias;
