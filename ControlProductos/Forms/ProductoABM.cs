@@ -30,7 +30,7 @@ namespace ControlProductos
 
         private void llenarFormEditar()
         {
-            btnguardar.Visible = false;
+            
             txbcodigo.Text = objProductoParaEditar.codigo.ToString();
             txbnombre.Text = objProductoParaEditar.nombre;
             txbdescripcion.Text = objProductoParaEditar.descripcion;

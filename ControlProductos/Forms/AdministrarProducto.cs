@@ -52,7 +52,7 @@ namespace ControlProductos
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             ProductoABM oProducto = new ProductoABM();
-            oProducto.Show();
+            oProducto.ShowDialog();
             this.Hide();
         }
 
@@ -73,7 +73,7 @@ namespace ControlProductos
             dgvproveedores.DataSource = oProductos.buscarProducto(familia, rubro,  proveedor,  filtro);
             dgvproveedores.Columns["IdProveedor"].Visible = false;
             dgvproveedores.Columns["IdRubro"].Visible = false;
-            dgvproveedores.Columns["IdFlia"].Visible = false;        
+            dgvproveedores.Columns["IdFamilia"].Visible = false;        
         }
         
         private void btneditar_Click(object sender, EventArgs e)
