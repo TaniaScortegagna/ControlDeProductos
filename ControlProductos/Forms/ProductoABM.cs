@@ -17,14 +17,43 @@ namespace ControlProductos
             InitializeComponent();
         }
 
-        private void ProductoABM_Load(object sender, EventArgs e)
+        private void ProductoABM_Load(object sender, EventArgs e) 
         {
 
-            btnactualizar.Visible = false;
+            
             CargarCombos();
-            ultimoCodigo();
+
+            llenarFormEditar();
+           // ultimoCodigo();
             
         }
+
+        private void llenarFormEditar()
+        {
+            btnguardar.Visible = false;
+            txbcodigo.Text = objProductoParaEditar.codigo.ToString();
+            txbnombre.Text = objProductoParaEditar.nombre;
+            txbdescripcion.Text = objProductoParaEditar.descripcion;
+            txbmarca.Text = objProductoParaEditar.marca;
+            int unIndice = 0;
+            int indice = 0;
+
+            foreach (Proveedor unProveedor in cmbproveedores.Items)
+            {
+                if (unProveedor.Id.Equals(objProductoParaEditar.proveedor))
+                {
+                    unIndice = indice;
+                }
+                indice++;
+            }
+            cmbproveedores.SelectedIndex = unIndice;
+            cmbrubros.SelectedValue = objProductoParaEditar.rubro;
+            txbprecio.Text = objProductoParaEditar.precio.ToString();
+        }
+
+        public Producto objProductoParaEditar; 
+
+
 
         private void ultimoCodigo()
         {
@@ -126,22 +155,36 @@ namespace ControlProductos
             AdminProd.Show();
         }
         
-        public void llenarForm(Producto oProducto) 
-        {
-           txbnombre.Text = oProducto.nombre;
-           txbdescripcion.Text = oProducto.descripcion;
-           txbmarca.Text= oProducto.marca;
-           cmbproveedores.SelectedValue = oProducto.proveedor;
-           cmbrubros.SelectedValue = oProducto.rubro;
-           txbprecio.Text = oProducto.precio.ToString();
+        //public void llenarForm(Producto oProducto) 
+        //{
+        //   btnguardar.Visible = false;
+        //   txbcodigo.Text = oProducto.codigo.ToString();
+        //   txbnombre.Text = oProducto.nombre;
+        //   txbdescripcion.Text = oProducto.descripcion;
+        //   txbmarca.Text= oProducto.marca;
+        //   int unIndice = 0;
+        //   int indice = 0;
+
+        //   foreach (Proveedor unProveedor in cmbproveedores.Items)
+        //   {
+        //       if (unProveedor.Id .Equals(oProducto.proveedor))
+        //       {
+        //           unIndice = indice;
+        //       }
+        //       indice++;
+        //   }
+        //   cmbproveedores.SelectedIndex = unIndice;
+        //   cmbrubros.SelectedValue = oProducto.rubro;
+        //   txbprecio.Text = oProducto.precio.ToString();
            
         
-        }
+        //}
 
         public void btnactualizar_Click(object sender, EventArgs e)
         {
             ValidarCampos();
             Producto oProducto = new Producto();
+            oProducto.codigo = Convert.ToInt32(txbcodigo.Text);
             oProducto.nombre = txbnombre.Text;
             oProducto.descripcion = txbdescripcion.Text;
             oProducto.marca = txbmarca.Text;
@@ -161,6 +204,7 @@ namespace ControlProductos
               }
             
         }
+
 
 
 

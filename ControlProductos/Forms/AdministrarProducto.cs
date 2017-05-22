@@ -80,8 +80,9 @@ namespace ControlProductos
         {
             Producto oProducto = enviarProdEditar(); 
             ProductoABM EditarProducto = new ProductoABM();
-            EditarProducto.llenarForm(oProducto);
-            EditarProducto.Show();         
+            EditarProducto.objProductoParaEditar = oProducto;
+           /// EditarProducto.llenarForm(oProducto);
+            EditarProducto.ShowDialog();         
             
         }
 

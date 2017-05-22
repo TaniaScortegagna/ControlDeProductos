@@ -69,7 +69,7 @@ namespace ControlProductos
             cnn.AgregarParametro("@Precio",pproducto.precio.ToString(),SqlDbType.Decimal);
             cnn.AgregarParametro("@Consulta","2", SqlDbType.Int);
             int Resultado = cnn.EjecutarNonQuery(pConsulta);
-            return Resultado>1;
+            return Resultado>=1;
 
         }
  }
