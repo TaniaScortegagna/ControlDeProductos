@@ -17,6 +17,12 @@ namespace ControlProductos
             InitializeComponent();
         }
 
+        private void btnproductos_Click(object sender, EventArgs e)
+        {
+            ProductoDao oProductos = new ProductoDao();
+            dgvproveedores.DataSource = oProductos.consultarProductos();
+
+        }
 
         private void cmbfamilia_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -30,7 +36,6 @@ namespace ControlProductos
 
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
-           
             CargarCombos();
         }
 
@@ -66,37 +71,7 @@ namespace ControlProductos
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             ProductoDao oProductos = new ProductoDao();
-            string familia = cmbfamilias.SelectedValue.ToString();
-            string rubro = cmbrubros.SelectedValue.ToString();
-            string proveedor = cmbproveedores.SelectedValue.ToString();
-            string filtro = txbbuscar.Text;
-            dgvproveedores.DataSource = oProductos.buscarProducto(familia, rubro,  proveedor,  filtro);
-            dgvproveedores.Columns["IdProveedor"].Visible = false;
-            dgvproveedores.Columns["IdRubro"].Visible = false;
-            dgvproveedores.Columns["IdFlia"].Visible = false;        
-        }
-        
-        private void btneditar_Click(object sender, EventArgs e)
-        {
-            Producto oProducto = enviarProdEditar(); 
-            ProductoABM EditarProducto = new ProductoABM();
-            EditarProducto.llenarForm(oProducto);
-            EditarProducto.Show();         
-            
-        }
-
-        private Producto enviarProdEditar()
-        {
-            Producto oProducto = new Producto();
-            oProducto.codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
-            oProducto.nombre = this.dgvproveedores.CurrentRow.Cells["Nombre"].Value.ToString();
-            oProducto.descripcion = this.dgvproveedores.CurrentRow.Cells["Descripcion"].Value.ToString();
-            oProducto.proveedor = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["IdProveedor"].Value.ToString());
-            oProducto.rubro = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["IdRubro"].Value.ToString());
-            oProducto.marca = this.dgvproveedores.CurrentRow.Cells["Marca"].Value.ToString();
-            oProducto.precio = Convert.ToDecimal(this.dgvproveedores.CurrentRow.Cells["Precio"].Value.ToString());
-
-            return oProducto;
+            dgvproveedores.DataSource = oProductos.buscarProducto(txbbuscar.Text);
         }
     }
 }

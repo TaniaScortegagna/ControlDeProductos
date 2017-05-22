@@ -38,10 +38,10 @@
             this.lblrubro = new System.Windows.Forms.Label();
             this.lblproveedor = new System.Windows.Forms.Label();
             this.lblbuscar = new System.Windows.Forms.Label();
-            this.btnbuscar = new System.Windows.Forms.Button();
-            this.btneditar = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
+            this.btnproductos = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,6 @@
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproveedores.Location = new System.Drawing.Point(23, 97);
             this.dgvproveedores.Name = "dgvproveedores";
-            this.dgvproveedores.ReadOnly = true;
             this.dgvproveedores.Size = new System.Drawing.Size(821, 297);
             this.dgvproveedores.TabIndex = 0;
             // 
@@ -59,7 +58,7 @@
             // 
             this.cmbfamilias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbfamilias.FormattingEnabled = true;
-            this.cmbfamilias.Location = new System.Drawing.Point(103, 13);
+            this.cmbfamilias.Location = new System.Drawing.Point(253, 14);
             this.cmbfamilias.Name = "cmbfamilias";
             this.cmbfamilias.Size = new System.Drawing.Size(184, 21);
             this.cmbfamilias.TabIndex = 1;
@@ -69,7 +68,7 @@
             // 
             this.cmbproveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbproveedores.FormattingEnabled = true;
-            this.cmbproveedores.Location = new System.Drawing.Point(449, 13);
+            this.cmbproveedores.Location = new System.Drawing.Point(599, 14);
             this.cmbproveedores.Name = "cmbproveedores";
             this.cmbproveedores.Size = new System.Drawing.Size(184, 21);
             this.cmbproveedores.TabIndex = 2;
@@ -78,14 +77,14 @@
             // 
             this.cmbrubros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbrubros.FormattingEnabled = true;
-            this.cmbrubros.Location = new System.Drawing.Point(103, 56);
+            this.cmbrubros.Location = new System.Drawing.Point(253, 57);
             this.cmbrubros.Name = "cmbrubros";
             this.cmbrubros.Size = new System.Drawing.Size(184, 21);
             this.cmbrubros.TabIndex = 3;
             // 
             // txbbuscar
             // 
-            this.txbbuscar.Location = new System.Drawing.Point(449, 56);
+            this.txbbuscar.Location = new System.Drawing.Point(599, 57);
             this.txbbuscar.Name = "txbbuscar";
             this.txbbuscar.Size = new System.Drawing.Size(184, 20);
             this.txbbuscar.TabIndex = 4;
@@ -94,7 +93,7 @@
             // 
             this.lblfamilia.AutoSize = true;
             this.lblfamilia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfamilia.Location = new System.Drawing.Point(26, 15);
+            this.lblfamilia.Location = new System.Drawing.Point(176, 16);
             this.lblfamilia.Name = "lblfamilia";
             this.lblfamilia.Size = new System.Drawing.Size(60, 16);
             this.lblfamilia.TabIndex = 6;
@@ -104,7 +103,7 @@
             // 
             this.lblrubro.AutoSize = true;
             this.lblrubro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblrubro.Location = new System.Drawing.Point(26, 58);
+            this.lblrubro.Location = new System.Drawing.Point(176, 59);
             this.lblrubro.Name = "lblrubro";
             this.lblrubro.Size = new System.Drawing.Size(50, 16);
             this.lblrubro.TabIndex = 7;
@@ -114,7 +113,7 @@
             // 
             this.lblproveedor.AutoSize = true;
             this.lblproveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblproveedor.Location = new System.Drawing.Point(353, 14);
+            this.lblproveedor.Location = new System.Drawing.Point(503, 15);
             this.lblproveedor.Name = "lblproveedor";
             this.lblproveedor.Size = new System.Drawing.Size(77, 16);
             this.lblproveedor.TabIndex = 8;
@@ -124,35 +123,11 @@
             // 
             this.lblbuscar.AutoSize = true;
             this.lblbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbuscar.Location = new System.Drawing.Point(353, 57);
+            this.lblbuscar.Location = new System.Drawing.Point(503, 58);
             this.lblbuscar.Name = "lblbuscar";
             this.lblbuscar.Size = new System.Drawing.Size(56, 16);
             this.lblbuscar.TabIndex = 9;
             this.lblbuscar.Text = "Buscar:";
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Location = new System.Drawing.Point(653, 56);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscar.TabIndex = 12;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Image = global::ControlProductos.Properties.Resources.editar;
-            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btneditar.Location = new System.Drawing.Point(850, 221);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(94, 38);
-            this.btneditar.TabIndex = 13;
-            this.btneditar.Text = "Editar";
-            this.btneditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btneditar.UseVisualStyleBackColor = true;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnvolver
             // 
@@ -182,13 +157,37 @@
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
+            // btnproductos
+            // 
+            this.btnproductos.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnproductos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnproductos.Image = global::ControlProductos.Properties.Resources.verProductos;
+            this.btnproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnproductos.Location = new System.Drawing.Point(23, 39);
+            this.btnproductos.Name = "btnproductos";
+            this.btnproductos.Size = new System.Drawing.Size(133, 36);
+            this.btnproductos.TabIndex = 5;
+            this.btnproductos.Text = "Ver Productos";
+            this.btnproductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnproductos.UseVisualStyleBackColor = false;
+            this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Location = new System.Drawing.Point(803, 57);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.TabIndex = 12;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 403);
-            this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnnuevo);
@@ -196,6 +195,7 @@
             this.Controls.Add(this.lblproveedor);
             this.Controls.Add(this.lblrubro);
             this.Controls.Add(this.lblfamilia);
+            this.Controls.Add(this.btnproductos);
             this.Controls.Add(this.txbbuscar);
             this.Controls.Add(this.cmbrubros);
             this.Controls.Add(this.cmbproveedores);
@@ -218,6 +218,7 @@
         private System.Windows.Forms.ComboBox cmbproveedores;
         private System.Windows.Forms.ComboBox cmbrubros;
         private System.Windows.Forms.TextBox txbbuscar;
+        private System.Windows.Forms.Button btnproductos;
         private System.Windows.Forms.Label lblfamilia;
         private System.Windows.Forms.Label lblrubro;
         private System.Windows.Forms.Label lblproveedor;
@@ -225,6 +226,5 @@
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnvolver;
         private System.Windows.Forms.Button btnbuscar;
-        private System.Windows.Forms.Button btneditar;
     }
 }

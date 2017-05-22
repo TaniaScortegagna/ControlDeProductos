@@ -38,10 +38,9 @@ namespace ControlProductos
             DataTable resultado = cnn.EjecutarQuery(pConsulta);
             return resultado;
         }
-        public DataTable buscarProducto(string buscado)
+        public int proxCod()
         {
             Conexion cnn = new Conexion();
-<<<<<<< HEAD
             string pConsulta = string.Format("SP_MOSTRAR_CODIGO_PRODUCTO");
             int resultado = Convert.ToInt32(cnn.TraerValor(pConsulta));
             return resultado + 1;
@@ -74,19 +73,4 @@ namespace ControlProductos
 
         }
  }
-=======
-            string pConsulta = string.Format("SELECT p.Codigo,p.Descripcion,p.Marca,p.Precio,pr.Nombre Proveedor,r.Nombre Rubro FROM Productos p JOIN Proveedores pr ON p.IdProveedor=pr.IdProv JOIN Rubros r ON p.IdRubro=r.IdRubro WHERE p.Nombre ="+buscado);
-            DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
-            return resultado;
-        }
-
-        //public int proxCod()
-        //{
-        //    Conexion cnn = new Conexion();
-        //    string pConsulta = string.Format("consultaIdProducto");
-        //    int resultado = Convert.ToInt32(cnn.TraerValor(pConsulta));
-        //    return resultado + 1;
-        //}
-    }
->>>>>>> origin/master
 }
