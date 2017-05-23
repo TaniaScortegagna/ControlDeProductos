@@ -99,5 +99,23 @@ namespace ControlProductos
 
             return oProducto;
         }
+
+        private void bnteliminar_Click(object sender, EventArgs e)
+        {
+            Producto oProducto = new Producto();
+            oProducto.codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
+            ProductoDao oProductoDAO = new ProductoDao();
+            if (oProductoDAO.bajaProducto(oProducto))
+            {
+                MessageBox.Show("PRODUCTO DADO DE BAJA", "CORRECTO");
+
+            }
+            else
+            {
+                MessageBox.Show("ERROR AL DAR LA BAJA", "CORRECTO");
+            }
+
+
+        }
     }
 }

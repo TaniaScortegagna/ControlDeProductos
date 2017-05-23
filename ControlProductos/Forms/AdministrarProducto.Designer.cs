@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarProducto));
             this.dgvproveedores = new System.Windows.Forms.DataGridView();
             this.cmbfamilias = new System.Windows.Forms.ComboBox();
@@ -41,17 +39,10 @@
             this.lblproveedor = new System.Windows.Forms.Label();
             this.lblbuscar = new System.Windows.Forms.Label();
             this.btnbuscar = new System.Windows.Forms.Button();
+            this.bnteliminar = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
-            this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescripcionProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,15 +50,6 @@
             // 
             this.dgvproveedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColCodigo,
-            this.ColNombre,
-            this.ColDescripcionProd,
-            this.ColMarca,
-            this.ColProveedor,
-            this.ColFamilia,
-            this.ColRubro,
-            this.ColPrecio});
             this.dgvproveedores.Location = new System.Drawing.Point(23, 97);
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.ReadOnly = true;
@@ -159,6 +141,20 @@
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
+            // bnteliminar
+            // 
+            this.bnteliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnteliminar.Image = global::ControlProductos.Properties.Resources.eliminar;
+            this.bnteliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnteliminar.Location = new System.Drawing.Point(850, 265);
+            this.bnteliminar.Name = "bnteliminar";
+            this.bnteliminar.Size = new System.Drawing.Size(94, 38);
+            this.bnteliminar.TabIndex = 14;
+            this.bnteliminar.Text = "Eliminar";
+            this.bnteliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bnteliminar.UseVisualStyleBackColor = true;
+            this.bnteliminar.Click += new System.EventHandler(this.bnteliminar_Click);
+            // 
             // btneditar
             // 
             this.btneditar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,73 +197,13 @@
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
-            // ColCodigo
-            // 
-            this.ColCodigo.DataPropertyName = "Codigo";
-            this.ColCodigo.HeaderText = "Codigo";
-            this.ColCodigo.Name = "ColCodigo";
-            this.ColCodigo.ReadOnly = true;
-            // 
-            // ColNombre
-            // 
-            this.ColNombre.DataPropertyName = "Nombre";
-            this.ColNombre.HeaderText = "Nombre Producto";
-            this.ColNombre.Name = "ColNombre";
-            this.ColNombre.ReadOnly = true;
-            // 
-            // ColDescripcionProd
-            // 
-            this.ColDescripcionProd.DataPropertyName = "Descripcion";
-            this.ColDescripcionProd.HeaderText = "Descripcion Producto";
-            this.ColDescripcionProd.Name = "ColDescripcionProd";
-            this.ColDescripcionProd.ReadOnly = true;
-            // 
-            // ColMarca
-            // 
-            this.ColMarca.DataPropertyName = "Marca";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMarca.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColMarca.HeaderText = "Marca";
-            this.ColMarca.Name = "ColMarca";
-            this.ColMarca.ReadOnly = true;
-            // 
-            // ColProveedor
-            // 
-            this.ColProveedor.DataPropertyName = "Nombre1";
-            this.ColProveedor.HeaderText = "Proveedor";
-            this.ColProveedor.Name = "ColProveedor";
-            this.ColProveedor.ReadOnly = true;
-            // 
-            // ColFamilia
-            // 
-            this.ColFamilia.DataPropertyName = "Nombre3";
-            this.ColFamilia.HeaderText = "Familia";
-            this.ColFamilia.Name = "ColFamilia";
-            this.ColFamilia.ReadOnly = true;
-            // 
-            // ColRubro
-            // 
-            this.ColRubro.DataPropertyName = "Nombre2";
-            this.ColRubro.HeaderText = "Rubro";
-            this.ColRubro.Name = "ColRubro";
-            this.ColRubro.ReadOnly = true;
-            // 
-            // ColPrecio
-            // 
-            this.ColPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.ColPrecio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColPrecio.HeaderText = "Precio";
-            this.ColPrecio.Name = "ColPrecio";
-            this.ColPrecio.ReadOnly = true;
-            // 
             // AdministrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(948, 403);
+            this.Controls.Add(this.bnteliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnvolver);
@@ -306,13 +242,6 @@
         private System.Windows.Forms.Button btnvolver;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcionProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColFamilia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRubro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
+        private System.Windows.Forms.Button bnteliminar;
     }
 }

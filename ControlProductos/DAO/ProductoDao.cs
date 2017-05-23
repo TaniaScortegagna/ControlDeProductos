@@ -72,5 +72,15 @@ namespace ControlProductos
             return Resultado>=1;
 
         }
- }
+        public bool bajaProducto(Producto pproducto)
+        {
+            Conexion cnn = new Conexion();
+            string pConsulta = string.Format("SP_ALTA_BAJA_MODIFICACION_PRODUCTOS");
+            cnn.AgregarParametro("@Codigo", pproducto.codigo.ToString(), SqlDbType.Int);
+            cnn.AgregarParametro("@Consulta", "3", SqlDbType.Int);
+            int Resultado = cnn.EjecutarNonQuery(pConsulta);
+            return Resultado >= 1;
+
+        }
+    }
 }
