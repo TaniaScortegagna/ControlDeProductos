@@ -81,6 +81,10 @@ namespace ControlProductos
             Producto oProducto = enviarProdEditar(); 
             ProductoABM EditarProducto = new ProductoABM();
             EditarProducto.objProductoParaEditar = oProducto;
+<<<<<<< HEAD
+=======
+           /// EditarProducto.llenarForm(oProducto);
+>>>>>>> origin/master
             EditarProducto.ShowDialog();         
             
         }
@@ -88,6 +92,7 @@ namespace ControlProductos
         private Producto enviarProdEditar()
         {
             Producto oProducto = new Producto();
+<<<<<<< HEAD
             oProducto.Codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
             oProducto.Nombre = this.dgvproveedores.CurrentRow.Cells["Nombre"].Value.ToString();
             oProducto.Descripcion = this.dgvproveedores.CurrentRow.Cells["Descripcion"].Value.ToString();
@@ -96,6 +101,15 @@ namespace ControlProductos
             oProducto.Rubro.Id = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["IdRubro"].Value.ToString());
             oProducto.Marca = this.dgvproveedores.CurrentRow.Cells["Marca"].Value.ToString();
             oProducto.Precio = Convert.ToDecimal(this.dgvproveedores.CurrentRow.Cells["Precio"].Value.ToString());
+=======
+            oProducto.codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
+            oProducto.nombre = this.dgvproveedores.CurrentRow.Cells["Nombre"].Value.ToString();
+            oProducto.descripcion = this.dgvproveedores.CurrentRow.Cells["Descripcion"].Value.ToString();
+            oProducto.proveedor = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["IdProveedor"].Value.ToString());
+            oProducto.rubro = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["IdRubro"].Value.ToString());
+            oProducto.marca = this.dgvproveedores.CurrentRow.Cells["Marca"].Value.ToString();
+            oProducto.precio = Convert.ToDecimal(this.dgvproveedores.CurrentRow.Cells["Precio"].Value.ToString());
+>>>>>>> origin/master
 
             return oProducto;
         }
@@ -103,7 +117,11 @@ namespace ControlProductos
         private void bnteliminar_Click(object sender, EventArgs e)
         {
             Producto oProducto = new Producto();
+<<<<<<< HEAD
             oProducto.Codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
+=======
+            oProducto.codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
+>>>>>>> origin/master
             ProductoDao oProductoDAO = new ProductoDao();
             if (oProductoDAO.bajaProducto(oProducto))
             {
