@@ -17,12 +17,30 @@ namespace ControlProductos
             InitializeComponent();
         }
 
-        private void ProductoABM_Load(object sender, EventArgs e)
+        private void ProductoABM_Load(object sender, EventArgs e) 
         {
-            CargarCombos();
-            ultimoCodigo();
             
+            CargarCombos();
+
+            llenarFormEditar();  
         }
+
+        private void llenarFormEditar()
+        {
+            
+            txbcodigo.Text = objProductoParaEditar.Codigo.ToString();
+            txbnombre.Text = objProductoParaEditar.Nombre;
+            txbdescripcion.Text = objProductoParaEditar.Descripcion;
+            txbmarca.Text = objProductoParaEditar.Marca;
+            cmbproveedores.SelectedValue = objProductoParaEditar.Proveedor.Id;
+            cmbrubros.SelectedValue = objProductoParaEditar.Rubro.Familia.Id;
+            cmbrubros.SelectedValue = objProductoParaEditar.Rubro.Id;
+            txbprecio.Text = objProductoParaEditar.Precio.ToString();
+        }
+
+        public Producto objProductoParaEditar; 
+
+
 
         private void ultimoCodigo()
         {
@@ -86,16 +104,17 @@ namespace ControlProductos
             
         }
 
-        private void btnguardar_Click(object sender, EventArgs e)
+        public void btnguardar_Click(object sender, EventArgs e)
         {
             ValidarCampos();
             Producto oProducto = new Producto();
-            oProducto.nombre = txbnombre.Text;
-            oProducto.descripcion = txbdescripcion.Text;
-            oProducto.marca = txbmarca.Text;
-            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
-            oProducto.rubro = (int)cmbrubros.SelectedValue;
-            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
+            oProducto.Nombre = txbnombre.Text;
+            oProducto.Descripcion = txbdescripcion.Text;
+            oProducto.Marca = txbmarca.Text;
+            oProducto.Proveedor.Id = (int)cmbproveedores.SelectedValue;
+            oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
+            oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
+            oProducto.Precio = Convert.ToDecimal(txbprecio.Text);
             ProductoDao oProductoDao = new ProductoDao();
             if (oProductoDao.altaProducto(oProducto))
               {
@@ -123,6 +142,59 @@ namespace ControlProductos
             AdministrarProducto AdminProd = new AdministrarProducto();
             AdminProd.Show();
         }
+        
+        //public void llenarForm(Producto oProducto) 
+        //{
+        //   btnguardar.Visible = false;
+        //   txbcodigo.Text = oProducto.codigo.ToString();
+        //   txbnombre.Text = oProducto.nombre;
+        //   txbdescripcion.Text = oProducto.descripcion;
+        //   txbmarca.Text= oProducto.marca;
+        //   int unIndice = 0;
+        //   int indice = 0;
+
+        //   foreach (Proveedor unProveedor in cmbproveedores.Items)
+        //   {
+        //       if (unProveedor.Id .Equals(oProducto.proveedor))
+        //       {
+        //           unIndice = indice;
+        //       }
+        //       indice++;
+        //   }
+        //   cmbproveedores.SelectedIndex = unIndice;
+        //   cmbrubros.SelectedValue = oProducto.rubro;
+        //   txbprecio.Text = oProducto.precio.ToString();
+           
+        
+        //}
+
+        public void btnactualizar_Click(object sender, EventArgs e)
+        {
+            ValidarCampos();
+            Producto oProducto = new Producto();
+            oProducto.Codigo = Convert.ToInt32(txbcodigo.Text);
+            oProducto.Nombre = txbnombre.Text;
+            oProducto.Descripcion = txbdescripcion.Text;
+            oProducto.Marca = txbmarca.Text;
+            oProducto.Proveedor.Id = (int)cmbproveedores.SelectedValue;
+            oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
+            oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
+            oProducto.Precio = Convert.ToDecimal(txbprecio.Text);
+            ProductoDao oProductoDao = new ProductoDao();
+            
+            if (oProductoDao.actualizarProducto(oProducto))
+             {
+                MessageBox.Show("DATOS ACTUALIZADOS", "CORRECTO");
+                
+             }
+            else
+              {
+                 MessageBox.Show("ERROR AL ACTUALIZADOS", "CORRECTO");
+              }
+            
+        }
+
+
 
 
     }

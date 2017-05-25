@@ -117,38 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdmPrv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\AdmPrv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdmProd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\AdmProd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdmRubros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\AdmRubros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="verProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\verProductos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMGprod" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\IMGprod.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdmFlia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\AdmFlia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AADDw8Nzw8PDc8PDw3PAwMBzvb29c7i4uHO4uLdzuLi4c7i4uHO4uLhzuLi4c7y8vHO/v79zwsLCc8PD
+        w3PDw8Nzw8PD/8LCwv/BwcH/wMDA/8HBwP/BwMD/wsHA/8LBwP/CwcH/x8bG/8TExP/BwcH/wcHB/8DA
+        wP/CwsL/w8PD/8PDw//BwcH/vr6+/7+/v/+yraj/sKyk/7CspP+wq6T/sq6m/3Fwb/+kpqf/wMDA/8C/
+        v/++vr7/wcHB/8LCwv/Dw8P/wcHB/8LCwv/ExMT/v727/7+8uf+/vLn/v7y5/8K/u/+DkZP/oMbS/7ra
+        5/+0wsj/xcTD/8LCwv/CwsL/w8PD/8HBwf/Hx8f/ysrK/7+9uf+/vLf/v7y3/7+8t/+/u7b/tMbO/5XQ
+        7/9Wve3/WLjh/8XIyf/Dw8P/wsLC/8PDw//AwMD/ysrK/8/Pzv+5tq7/tbGq/7Wxqf+1san/uLSu/8rO
+        0f82s+n/Q7fp/zKz6P9outv/0cjE/8HBwv/Dw8P/v7+//87Ozv/T09P/wr+7/8C8uP/AvLj/wLy4/8C8
+        t//BvLb/pLnA/zS06P8lruT/Ja3m/4G4z//Gw8D/w8PD/7+/v//R0dH/2NjY/9TU0//U1NP/1NTT/9TU
+        0//U1NP/1NTT/9nTz/+RyeX/Ja3m/y2v5f+Dr87/q6i4/8PDw/++vr7/1dXU/9vc3P+3sqn/sqyi/7Gs
+        ov+xrKL/sayh/7Cqn/+6tq7/3tzc/5HJ5P+Jn8D/LCqU/29vtf/Dw8P/vr6+/9fX1//e39//xsS+/8O/
+        uf/Dv7n/w7+5/8fEv//j5OX/4uLj/93d3v/RztX/Ojqi/3t7u//Dw8L/w8PD/76+vv/a2tr/4uLj/9va
+        2f/b2tj/29rY/9va2P/b2tn/3t7d/93e3v/e3d3/4+Ti/+Hh4//Q0Mz/wcHB/8PDw/++vr7/3Nzc/+nm
+        6P/Nw8D/yL25/8e9uf/Hvbn/x725/8i9uf/Ivbn/y8G9/+zm6f/l5OX/y8vM/8HBwf/Dw8P/vr6+/+He
+        4P+12sf/ZsaS/2rHlf9qx5X/aseV/2rHlf9qx5X/aseV/2zHlv+DxKD/0tnV/8rKyv/BwcH/w8PD/76+
+        vv/l4OP/j9a1/xW8bf8cvXD/HL1w/xy9cP8cvXD/HL1w/xjAcP9NmHP/amxq/4SEhP/CwsL/wsLC/8PD
+        w/++vr7/4+Hh/8Ll1/+N37v/kN69/5Hevf+R3r3/kd69/5Hevf+R5sH/bYt+/3Z1df++vr7/wsLC/8PD
+        w//Dw8P/v7+//9bW1v/k4uT/5eHk/+Xh5P/l4eT/5eHk/+Xh5P/l4eT/5+Xn/52cnP+9vb3/w8PD/8PD
+        w//Dw8P/AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
+</value>
   </data>
 </root>
