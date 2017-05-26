@@ -112,7 +112,10 @@
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnaceptar);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+=======
+>>>>>>> origin/master
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

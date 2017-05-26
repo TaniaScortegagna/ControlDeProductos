@@ -64,6 +64,10 @@
             this.cmbfamilias.Name = "cmbfamilias";
             this.cmbfamilias.Size = new System.Drawing.Size(184, 21);
             this.cmbfamilias.TabIndex = 1;
+<<<<<<< HEAD
+=======
+            this.cmbfamilias.SelectedIndexChanged += new System.EventHandler(this.cmbfamilia_SelectedIndexChanged);
+>>>>>>> origin/master
             // 
             // cmbproveedores
             // 
@@ -216,10 +220,15 @@
             this.Controls.Add(this.cmbproveedores);
             this.Controls.Add(this.cmbfamilias);
             this.Controls.Add(this.dgvproveedores);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministrarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AdministrarProducto";
+>>>>>>> origin/master
             this.Text = "Administrar Producto";
             this.Load += new System.EventHandler(this.AdministrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).EndInit();

@@ -257,10 +257,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProductoABM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ProductoABM";
+>>>>>>> origin/master
             this.Text = "Producto";
             this.Load += new System.EventHandler(this.ProductoABM_Load);
             this.ResumeLayout(false);

@@ -8,6 +8,10 @@ namespace ControlProductos
 {
    public class Producto
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
         public int Codigo{get;set; }
         public string Nombre{get;set; }
         public string Descripcion{get;set; }
@@ -30,5 +34,30 @@ namespace ControlProductos
             
         }
    
+<<<<<<< HEAD
+=======
+=======
+        public int codigo{get;set; }
+        public string nombre{get;set; }
+        public string descripcion{get;set; }
+        public int proveedor{get;set; }
+        public int rubro{get;set; }
+        public string marca{get;set; }
+        public decimal precio{get;set; }
+
+        public Producto() { }
+
+        public Producto(int pcod,string pnom,string pdesc,int pprov,int prubro,string pmarca, decimal pprecio)
+        {
+            this.codigo = pcod;
+            this.nombre = pnom;
+            this.descripcion = pdesc;
+            this.proveedor = pprov;
+            this.marca = pmarca;
+            this.precio = pprecio;
+            
+        }
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
 }

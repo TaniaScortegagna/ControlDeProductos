@@ -19,14 +19,35 @@ namespace ControlProductos
 
         private void ProductoABM_Load(object sender, EventArgs e) 
         {
+<<<<<<< HEAD
             
             CargarCombos();
             llenarFormEditar();  
+=======
+<<<<<<< HEAD
+            
+            CargarCombos();
+
+            llenarFormEditar();  
+=======
+
+            
+            CargarCombos();
+
+            llenarFormEditar();
+           // ultimoCodigo();
+            
+>>>>>>> origin/master
+>>>>>>> origin/master
         }
 
         private void llenarFormEditar()
         {
             
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
             txbcodigo.Text = objProductoParaEditar.Codigo.ToString();
             txbnombre.Text = objProductoParaEditar.Nombre;
             txbdescripcion.Text = objProductoParaEditar.Descripcion;
@@ -35,6 +56,29 @@ namespace ControlProductos
             cmbrubros.SelectedValue = objProductoParaEditar.Rubro.Familia.Id;
             cmbrubros.SelectedValue = objProductoParaEditar.Rubro.Id;
             txbprecio.Text = objProductoParaEditar.Precio.ToString();
+<<<<<<< HEAD
+=======
+=======
+            txbcodigo.Text = objProductoParaEditar.codigo.ToString();
+            txbnombre.Text = objProductoParaEditar.nombre;
+            txbdescripcion.Text = objProductoParaEditar.descripcion;
+            txbmarca.Text = objProductoParaEditar.marca;
+            int unIndice = 0;
+            int indice = 0;
+
+            foreach (Proveedor unProveedor in cmbproveedores.Items)
+            {
+                if (unProveedor.Id.Equals(objProductoParaEditar.proveedor))
+                {
+                    unIndice = indice;
+                }
+                indice++;
+            }
+            cmbproveedores.SelectedIndex = unIndice;
+            cmbrubros.SelectedValue = objProductoParaEditar.rubro;
+            txbprecio.Text = objProductoParaEditar.precio.ToString();
+>>>>>>> origin/master
+>>>>>>> origin/master
         }
 
         public Producto objProductoParaEditar; 
@@ -50,7 +94,10 @@ namespace ControlProductos
         private void CargarCombos()
         {
             ProveedorDao oProveedor = new ProveedorDao();
+<<<<<<< HEAD
             
+=======
+>>>>>>> origin/master
             cmbproveedores.DataSource = oProveedor.obtenerProveedores();
             cmbproveedores.DisplayMember = "Nombre";
             cmbproveedores.ValueMember = "Id";
@@ -108,6 +155,10 @@ namespace ControlProductos
         {
             ValidarCampos();
             Producto oProducto = new Producto();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
             oProducto.Nombre = txbnombre.Text;
             oProducto.Descripcion = txbdescripcion.Text;
             oProducto.Marca = txbmarca.Text;
@@ -115,6 +166,17 @@ namespace ControlProductos
             oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
             oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
             oProducto.Precio = Convert.ToDecimal(txbprecio.Text);
+<<<<<<< HEAD
+=======
+=======
+            oProducto.nombre = txbnombre.Text;
+            oProducto.descripcion = txbdescripcion.Text;
+            oProducto.marca = txbmarca.Text;
+            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
+            oProducto.rubro = (int)cmbrubros.SelectedValue;
+            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
+>>>>>>> origin/master
+>>>>>>> origin/master
             ProductoDao oProductoDao = new ProductoDao();
             if (oProductoDao.altaProducto(oProducto))
               {
@@ -142,11 +204,43 @@ namespace ControlProductos
             AdministrarProducto AdminProd = new AdministrarProducto();
             AdminProd.Show();
         }
+<<<<<<< HEAD
+=======
+        
+        //public void llenarForm(Producto oProducto) 
+        //{
+        //   btnguardar.Visible = false;
+        //   txbcodigo.Text = oProducto.codigo.ToString();
+        //   txbnombre.Text = oProducto.nombre;
+        //   txbdescripcion.Text = oProducto.descripcion;
+        //   txbmarca.Text= oProducto.marca;
+        //   int unIndice = 0;
+        //   int indice = 0;
+
+        //   foreach (Proveedor unProveedor in cmbproveedores.Items)
+        //   {
+        //       if (unProveedor.Id .Equals(oProducto.proveedor))
+        //       {
+        //           unIndice = indice;
+        //       }
+        //       indice++;
+        //   }
+        //   cmbproveedores.SelectedIndex = unIndice;
+        //   cmbrubros.SelectedValue = oProducto.rubro;
+        //   txbprecio.Text = oProducto.precio.ToString();
+           
+        
+        //}
+>>>>>>> origin/master
 
         public void btnactualizar_Click(object sender, EventArgs e)
         {
             ValidarCampos();
             Producto oProducto = new Producto();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
             oProducto.Codigo = Convert.ToInt32(txbcodigo.Text);
             oProducto.Nombre = txbnombre.Text;
             oProducto.Descripcion = txbdescripcion.Text;
@@ -155,6 +249,18 @@ namespace ControlProductos
             oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
             oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
             oProducto.Precio = Convert.ToDecimal(txbprecio.Text);
+<<<<<<< HEAD
+=======
+=======
+            oProducto.codigo = Convert.ToInt32(txbcodigo.Text);
+            oProducto.nombre = txbnombre.Text;
+            oProducto.descripcion = txbdescripcion.Text;
+            oProducto.marca = txbmarca.Text;
+            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
+            oProducto.rubro = (int)cmbrubros.SelectedValue;
+            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
+>>>>>>> origin/master
+>>>>>>> origin/master
             ProductoDao oProductoDao = new ProductoDao();
             
             if (oProductoDao.actualizarProducto(oProducto))
