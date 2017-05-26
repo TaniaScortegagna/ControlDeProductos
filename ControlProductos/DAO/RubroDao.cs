@@ -15,16 +15,34 @@ namespace ControlProductos
         {
             List<Rubro> listaRubros = new List<Rubro>();
             Conexion cnn = new Conexion();
-            string pConsulta = string.Format("SELECT IdRubro , Nombre FROM Rubros WHERE IdFlia = '{0}'", pIdFlia);            
-            DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
-
-            for (int x = 0; x < resultado.Rows.Count; x++)
+            string pConsulta = string.Format("SP_LISTAR_RUBROS");
+            cnn.AgregarParametro("@idFlia", pIdFlia.ToString(), SqlDbType.Int);
+            DataTable resultado = cnn.EjecutarQuery(pConsulta);            
+            foreach (DataRow rubro in resultado.Rows)
             {
                 Rubro oRubro = new Rubro();
-                oRubro.Id = Convert.ToInt32(resultado.Rows[x]["IdRubro"]);
-                oRubro.Nombre = resultado.Rows[x]["Nombre"].ToString();
+                oRubro.Id = Convert.ToInt32(rubro["IdRubro"]);
+                oRubro.Nombre = rubro["Nombre"].ToString();
                 listaRubros.Add(oRubro);
             }
+            listaRubros.Insert(0, new Rubro() { Id = 0, Nombre = "<Seleccione un Item>" });
+            cnn.Desconectar();
+            return listaRubros;
+        }
+        public List<Rubro> obtenerRubro()
+        {
+            List<Rubro> listaRubros = new List<Rubro>();
+            Conexion cnn = new Conexion();
+            string pConsulta = string.Format("SP_LISTAR_RUBROS_SIN_FAMILIA");
+            DataTable resultado = cnn.EjecutarQuery(pConsulta);
+            foreach (DataRow rubro in resultado.Rows)
+            {
+                Rubro oRubro = new Rubro();
+                oRubro.Id = Convert.ToInt32(rubro["IdRubro"]);
+                oRubro.Nombre = rubro["Nombre"].ToString();
+                listaRubros.Add(oRubro);
+            }
+            listaRubros.Insert(0, new Rubro() { Id = 0, Nombre = "<Seleccione un Item>" });
             cnn.Desconectar();
             return listaRubros;
         }

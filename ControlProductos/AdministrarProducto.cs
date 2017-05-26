@@ -67,5 +67,11 @@ namespace ControlProductos
             MenuPrin.Show();
             this.Close();
         }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            ProductoDao oProductos = new ProductoDao();
+            dgvproveedores.DataSource = oProductos.buscarProducto(txbbuscar.Text);
+        }
     }
 }

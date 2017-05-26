@@ -16,18 +16,19 @@ namespace ControlProductos
             List<Proveedor> listaProveedores = new List<Proveedor>();
             Conexion cnn = new Conexion();
 
-            string pConsulta = string.Format("SELECT IdProv,Nombre FROM Proveedores");
-            DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
+            string pConsulta = string.Format("SP_LISTAR_PROVEEDORES");
+            DataTable resultado = cnn.EjecutarQuery(pConsulta);
 
-            for (int x = 0; x < resultado.Rows.Count; x++)
+            foreach (DataRow proveedor in resultado.Rows)
             {
                 Proveedor oProveedor = new Proveedor();
-                oProveedor.Id = Convert.ToInt32(resultado.Rows[x]["IdProv"]);
-                oProveedor.Nombre = resultado.Rows[x]["Nombre"].ToString();
+                oProveedor.Id = Convert.ToInt32(proveedor["IdProv"]);
+                oProveedor.Nombre = proveedor["Nombre"].ToString();
                 listaProveedores.Add(oProveedor);
 
             }
 
+            listaProveedores.Insert(0, new Proveedor() { Id = 0, Nombre = "<Seleccione un Item>" });
             return listaProveedores;
         }
     }

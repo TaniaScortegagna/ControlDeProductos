@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ControlProductos
 {
@@ -14,13 +15,15 @@ namespace ControlProductos
 
         public bool BuscarUsuario(string pUsuario,string pClave )
         {
-            bool estaOk = false;
-            Conexion cnn = new Conexion();            
-            string pConsulta = "";
-            pConsulta = string.Format(@"SELECT IdUsuario FROM Usuarios WHERE Usuario = '{0}' AND Clave ='{1}'",pUsuario, pClave);
-            DataTable resultado = cnn.EjecutarQuery(pConsulta, CommandType.Text);
-            cnn.Desconectar();
-            return resultado.Rows.Count > 0;
+
+                    Conexion cnn = new Conexion();            
+                    string pConsulta = string.Format("SP_VERIFICAR_USUARIO");
+                    cnn.AgregarParametro("@Usuario", pUsuario.ToString(),SqlDbType.VarChar);
+                    cnn.AgregarParametro("@Clave", pClave.ToString(), SqlDbType.VarChar);
+                    DataTable resultado = cnn.EjecutarQuery(pConsulta);
+                    cnn.Desconectar();
+                    return resultado.Rows.Count > 0;
+
 
         }
    }

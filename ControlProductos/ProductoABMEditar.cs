@@ -10,27 +10,32 @@ using System.Windows.Forms;
 
 namespace ControlProductos
 {
-    public partial class ProductoABM : Form
+    public partial class ProductoABMEditar : Form
     {
-        public ProductoABM()
+        AdministrarProducto frmAdminPro = new AdministrarProducto();
+        public ProductoABMEditar(string _codigo)
         {
             InitializeComponent();
+            this.txbcodigo.Text = _codigo;
+        //    this.txbnombre = _nombre;
         }
 
-        private void ProductoABM_Load(object sender, EventArgs e)
+        public ProductoABMEditar()
         {
+            // TODO: Complete member initialization
+        }
+        private void ProductoABMEditar_Load(object sender, EventArgs e)
+        {
+            //txbcodigo.Text = _codigo;
+            //txbnombre = Convert.ToString(_nombre);
+            //txbcodigo.Text = AdministrarProducto.;
+            //txbnombre.Text = "Matias";
+            txbdescripcion.Text = "Genial";
+            txbmarca.Text = "Whirpool";
+            txbprecio.Text = "12,50";
             CargarCombos();
-            ultimoCodigo();
-            
         }
-
-        private void ultimoCodigo()
-        {
-            ProductoDao oProducto = new ProductoDao();
-            txbcodigo.Text = oProducto.proxCod().ToString();
-        }
-
-        private void CargarCombos()
+         private void CargarCombos()
         {
             ProveedorDao oProveedor = new ProveedorDao();
             cmbproveedores.DataSource = oProveedor.obtenerProveedores();
@@ -55,40 +60,13 @@ namespace ControlProductos
             cmbrubros.ValueMember = "Id";
 
         }
-        private void limpiarTexBox()
-        {
-            foreach (Control limpiarTextBox in this.Controls)
-            {
-                if (limpiarTextBox is TextBox)
-                {
-                    TextBox text = limpiarTextBox as TextBox;
-                    text.Clear();
-                }
-            }
-        }
         private void ValidarCampos()
-        {
-            foreach (Control validarTextBox in this.Controls)
-            {
-                if (validarTextBox is TextBox)
-                {
-                    if (string.IsNullOrEmpty(txbnombre.Text))
-                    {
-
-                        MessageBox.Show("Debe completar la informacion");
-
-                        return;
-
-                    }
-                }
-            }
-
+        { 
             
         }
-
+        
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            ValidarCampos();
             Producto oProducto = new Producto();
             oProducto.nombre = txbnombre.Text;
             oProducto.descripcion = txbdescripcion.Text;
@@ -99,22 +77,19 @@ namespace ControlProductos
             ProductoDao oProductoDao = new ProductoDao();
             if (oProductoDao.altaProducto(oProducto))
               {
-                    DialogResult guardado = MessageBox.Show("DATOS GUARDADOS, ¿Desea cargar un nuevo producto?","CORRECTO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (guardado == DialogResult.Yes)
+                    DialogResult guardado = MessageBox.Show("DATOS EDITADOS CORRECTAMENTE","CORRECTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (guardado == DialogResult.OK)
                     {
-                        limpiarTexBox();
+                        this.Close();
+                        AdministrarProducto AdminProd = new AdministrarProducto();
+                        AdminProd.Show();
                     }
                     else
                     {
-                        AdministrarProducto iniciar = new AdministrarProducto();
-                        iniciar.Show();
-                        this.Close();
+                        MessageBox.Show("Datos Incorrectos", "Error");
                     }
                 }
-                else
-                {
-                     MessageBox.Show( "Datos Incorrectos", "Error");
-                }
+               
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -123,7 +98,5 @@ namespace ControlProductos
             AdministrarProducto AdminProd = new AdministrarProducto();
             AdminProd.Show();
         }
-
-
     }
 }
