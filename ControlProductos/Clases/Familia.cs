@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControlProductos
 {
-<<<<<<< HEAD
     public class Familia
-=======
-<<<<<<< HEAD
-    public class Familia
-=======
-    class Familia
->>>>>>> origin/master
->>>>>>> origin/master
     {
         public int Id { get; set; }
         public String Nombre { get; set; }

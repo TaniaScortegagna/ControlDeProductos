@@ -16,88 +16,47 @@ namespace ControlProductos
         {
             InitializeComponent();
         }
-
         private void ProductoABM_Load(object sender, EventArgs e) 
         {
-<<<<<<< HEAD
-            
-            CargarCombos();
-            llenarFormEditar();  
-=======
-<<<<<<< HEAD
-            
-            CargarCombos();
-
-            llenarFormEditar();  
-=======
-
-            
-            CargarCombos();
-
-            llenarFormEditar();
-           // ultimoCodigo();
-            
->>>>>>> origin/master
->>>>>>> origin/master
+            if (objProductoParaEditar == null)
+            {
+                CargarCombos();
+                btnactualizar.Visible = false;
+                chkActivo.Visible = false;
+            }
+            else
+            {
+                CargarCombos();
+                llenarFormEditar();
+                btnguardar.Visible = false;
+            }
         }
-
         private void llenarFormEditar()
         {
-            
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-            txbcodigo.Text = objProductoParaEditar.Codigo.ToString();
-            txbnombre.Text = objProductoParaEditar.Nombre;
-            txbdescripcion.Text = objProductoParaEditar.Descripcion;
-            txbmarca.Text = objProductoParaEditar.Marca;
+            txbcodigo.Text = objProductoParaEditar.Codigo.ToString().Trim(); 
+            txbnombre.Text = objProductoParaEditar.Nombre.Trim();
+            txbdescripcion.Text = objProductoParaEditar.Descripcion.Trim();
+            txbmarca.Text = objProductoParaEditar.Marca.Trim();
             cmbproveedores.SelectedValue = objProductoParaEditar.Proveedor.Id;
-            cmbrubros.SelectedValue = objProductoParaEditar.Rubro.Familia.Id;
+            cmbfamilias.SelectedValue = objProductoParaEditar.Rubro.Familia.Id;
             cmbrubros.SelectedValue = objProductoParaEditar.Rubro.Id;
-            txbprecio.Text = objProductoParaEditar.Precio.ToString();
-<<<<<<< HEAD
-=======
-=======
-            txbcodigo.Text = objProductoParaEditar.codigo.ToString();
-            txbnombre.Text = objProductoParaEditar.nombre;
-            txbdescripcion.Text = objProductoParaEditar.descripcion;
-            txbmarca.Text = objProductoParaEditar.marca;
-            int unIndice = 0;
-            int indice = 0;
-
-            foreach (Proveedor unProveedor in cmbproveedores.Items)
+            txbprecio.Text = objProductoParaEditar.Precio.ToString().Trim();
+            if (objProductoParaEditar.Activo)
             {
-                if (unProveedor.Id.Equals(objProductoParaEditar.proveedor))
-                {
-                    unIndice = indice;
-                }
-                indice++;
+                chkActivo.Checked = true;
             }
-            cmbproveedores.SelectedIndex = unIndice;
-            cmbrubros.SelectedValue = objProductoParaEditar.rubro;
-            txbprecio.Text = objProductoParaEditar.precio.ToString();
->>>>>>> origin/master
->>>>>>> origin/master
+
         }
-
         public Producto objProductoParaEditar; 
-
-
-
         private void ultimoCodigo()
         {
             ProductoDao oProducto = new ProductoDao();
             txbcodigo.Text = oProducto.proxCod().ToString();
         }
-
         private void CargarCombos()
         {
             ProveedorDao oProveedor = new ProveedorDao();
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/master
             cmbproveedores.DataSource = oProveedor.obtenerProveedores();
             cmbproveedores.DisplayMember = "Nombre";
             cmbproveedores.ValueMember = "Id";
@@ -109,7 +68,6 @@ namespace ControlProductos
 
             cmbfamilias.SelectedIndex = 0;
         }
-
         private void cmbfamilias_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbrubros.DataSource = null;
@@ -124,6 +82,9 @@ namespace ControlProductos
         {
             foreach (Control limpiarTextBox in this.Controls)
             {
+                cmbfamilias.SelectedValue = 0;
+                cmbproveedores.SelectedValue = 0;
+                cmbrubros.SelectedValue = 0;
                 if (limpiarTextBox is TextBox)
                 {
                     TextBox text = limpiarTextBox as TextBox;
@@ -131,152 +92,173 @@ namespace ControlProductos
                 }
             }
         }
-        private void ValidarCampos()
-        {
-            foreach (Control validarTextBox in this.Controls)
-            {
-                if (validarTextBox is TextBox)
-                {
-                    if (string.IsNullOrEmpty(txbnombre.Text))
-                    {
-
-                        MessageBox.Show("Debe completar la informacion");
-
-                        return;
-
-                    }
-                }
-            }
-
-            
-        }
-
         public void btnguardar_Click(object sender, EventArgs e)
         {
-            ValidarCampos();
             Producto oProducto = new Producto();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-            oProducto.Nombre = txbnombre.Text;
-            oProducto.Descripcion = txbdescripcion.Text;
-            oProducto.Marca = txbmarca.Text;
-            oProducto.Proveedor.Id = (int)cmbproveedores.SelectedValue;
-            oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
-            oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
-            oProducto.Precio = Convert.ToDecimal(txbprecio.Text);
-<<<<<<< HEAD
-=======
-=======
-            oProducto.nombre = txbnombre.Text;
-            oProducto.descripcion = txbdescripcion.Text;
-            oProducto.marca = txbmarca.Text;
-            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
-            oProducto.rubro = (int)cmbrubros.SelectedValue;
-            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
->>>>>>> origin/master
->>>>>>> origin/master
-            ProductoDao oProductoDao = new ProductoDao();
-            if (oProductoDao.altaProducto(oProducto))
-              {
-                    DialogResult guardado = MessageBox.Show("DATOS GUARDADOS, ¿Desea cargar un nuevo producto?","CORRECTO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (string.IsNullOrEmpty(txbnombre.Text) && string.IsNullOrEmpty(txbdescripcion.Text) && string.IsNullOrEmpty(txbmarca.Text) && string.IsNullOrEmpty(txbprecio.Text) && ((int)cmbproveedores.SelectedValue == 0) && ((int)cmbfamilias.SelectedValue) == 0 && ((int)cmbrubros.SelectedValue == 0))
+            {
+                MessageBox.Show("DEBE COMPLETAR INFORMACION", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                oProducto.Nombre = txbnombre.Text.Trim();
+                oProducto.Descripcion = txbdescripcion.Text.Trim();
+                oProducto.Marca = txbmarca.Text.Trim();
+                oProducto.Proveedor.Id = (int)cmbproveedores.SelectedValue;
+                oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
+                oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
+                oProducto.Precio = Convert.ToDouble(txbprecio.Text);
+                ProductoDao oProductoDao = new ProductoDao();
+                if (oProductoDao.altaProducto(oProducto))
+                {
+                    DialogResult guardado = MessageBox.Show("DATOS GUARDADOS, ¿Desea cargar un nuevo producto?", "CORRECTO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (guardado == DialogResult.Yes)
                     {
                         limpiarTexBox();
                     }
                     else
                     {
-                        AdministrarProducto iniciar = new AdministrarProducto();
-                        iniciar.Show();
                         this.Close();
                     }
                 }
                 else
                 {
-                     MessageBox.Show( "Datos Incorrectos", "Error");
+                    MessageBox.Show("Datos Incorrectos", "Error");
                 }
+            }
         }
-
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-            AdministrarProducto AdminProd = new AdministrarProducto();
-            AdminProd.Show();
         }
-<<<<<<< HEAD
-=======
-        
-        //public void llenarForm(Producto oProducto) 
-        //{
-        //   btnguardar.Visible = false;
-        //   txbcodigo.Text = oProducto.codigo.ToString();
-        //   txbnombre.Text = oProducto.nombre;
-        //   txbdescripcion.Text = oProducto.descripcion;
-        //   txbmarca.Text= oProducto.marca;
-        //   int unIndice = 0;
-        //   int indice = 0;
-
-        //   foreach (Proveedor unProveedor in cmbproveedores.Items)
-        //   {
-        //       if (unProveedor.Id .Equals(oProducto.proveedor))
-        //       {
-        //           unIndice = indice;
-        //       }
-        //       indice++;
-        //   }
-        //   cmbproveedores.SelectedIndex = unIndice;
-        //   cmbrubros.SelectedValue = oProducto.rubro;
-        //   txbprecio.Text = oProducto.precio.ToString();
-           
-        
-        //}
->>>>>>> origin/master
-
         public void btnactualizar_Click(object sender, EventArgs e)
         {
-            ValidarCampos();
-            Producto oProducto = new Producto();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-            oProducto.Codigo = Convert.ToInt32(txbcodigo.Text);
-            oProducto.Nombre = txbnombre.Text;
-            oProducto.Descripcion = txbdescripcion.Text;
-            oProducto.Marca = txbmarca.Text;
-            oProducto.Proveedor.Id = (int)cmbproveedores.SelectedValue;
-            oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
-            oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
-            oProducto.Precio = Convert.ToDecimal(txbprecio.Text);
-<<<<<<< HEAD
-=======
-=======
-            oProducto.codigo = Convert.ToInt32(txbcodigo.Text);
-            oProducto.nombre = txbnombre.Text;
-            oProducto.descripcion = txbdescripcion.Text;
-            oProducto.marca = txbmarca.Text;
-            oProducto.proveedor = (int)cmbproveedores.SelectedValue;
-            oProducto.rubro = (int)cmbrubros.SelectedValue;
-            oProducto.precio = Convert.ToDecimal(txbprecio.Text);
->>>>>>> origin/master
->>>>>>> origin/master
-            ProductoDao oProductoDao = new ProductoDao();
-            
-            if (oProductoDao.actualizarProducto(oProducto))
-             {
-                MessageBox.Show("DATOS ACTUALIZADOS", "CORRECTO");
-                
-             }
+            if (chkActivo.Checked)
+            {
+                Producto oProducto = new Producto();
+                oProducto.Activo = chkActivo.Checked;
+                oProducto.Codigo = Convert.ToInt32(txbcodigo.Text);
+                oProducto.Nombre = txbnombre.Text;
+                oProducto.Descripcion = txbdescripcion.Text;
+                oProducto.Marca = txbmarca.Text;
+                oProducto.Proveedor.Id = (int)cmbproveedores.SelectedValue;
+                oProducto.Rubro.Familia.Id = (int)cmbfamilias.SelectedValue;
+                oProducto.Rubro.Id = (int)cmbrubros.SelectedValue;
+                oProducto.Precio = Convert.ToDouble(txbprecio.Text);
+                ProductoDao oProductoDao = new ProductoDao();
+
+                if (oProductoDao.actualizarProducto(oProducto))
+                {
+                    MessageBox.Show("DATOS ACTUALIZADOS", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR AL ACTUALIZAR", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
             else
-              {
-                 MessageBox.Show("ERROR AL ACTUALIZADOS", "CORRECTO");
-              }
-            
+            {
+                MessageBox.Show("ERROR AL ACTUALIZAR", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
+        private void txbnombre_Validated(object sender, EventArgs e)
+        {
+            if (txbnombre.Text.Trim() == "")
+            {
+                epError.SetError(txbnombre, "Introduzca Nombre");
+                txbnombre.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+        private void txbdescripcion_Validated(object sender, EventArgs e)
+        {
+            if (txbdescripcion.Text.Trim() == "")
+            {
+                epError.SetError(txbdescripcion, "Intruduce Descripcion");
+                txbdescripcion.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
 
+        }
+        private void txbmarca_Validated(object sender, EventArgs e)
+        {
+            if (txbmarca.Text.Trim() == "")
+            {
+                epError.SetError(txbmarca, "Intruduce Marca");
+                txbmarca.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
 
+        }
+        private void txbprecio_Validated(object sender, EventArgs e)
+        {
+            if (txbprecio.Text.Trim() == "")
+            {
+                epError.SetError(txbprecio, "Intruduce Marca");
+                txbprecio.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
 
+        }
+        private void cmbproveedores_Validated(object sender, EventArgs e)
+        {
+            if ((int)cmbproveedores.SelectedValue == 0)
+            {
+                epError.SetError(cmbproveedores, "Seleccione proveedor");
+                cmbproveedores.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+
+        }
+        private void cmbfamilias_Validated(object sender, EventArgs e)
+        {
+            if ((int)cmbfamilias.SelectedValue == 0)
+            {
+                epError.SetError(cmbfamilias, "Seleccione familia");
+                cmbfamilias.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+
+        }
+        private void cmbrubros_Validated(object sender, EventArgs e)
+        {
+            if ((int)cmbrubros.SelectedValue == 0)
+            {
+                epError.SetError(cmbrubros, "Seleccione rubro");
+                cmbrubros.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+
+        }
+        private void ProductoABM_Activated(object sender, EventArgs e)
+        {
+            txbnombre.Focus();
+        }
 
     }
 }

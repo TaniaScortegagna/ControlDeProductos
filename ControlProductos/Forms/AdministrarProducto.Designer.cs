@@ -38,9 +38,11 @@
             this.lblrubro = new System.Windows.Forms.Label();
             this.lblproveedor = new System.Windows.Forms.Label();
             this.lblbuscar = new System.Windows.Forms.Label();
-            this.btnbuscar = new System.Windows.Forms.Button();
-            this.bnteliminar = new System.Windows.Forms.Button();
+            this.chkBaja = new System.Windows.Forms.CheckBox();
+            this.chkTodos = new System.Windows.Forms.CheckBox();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
@@ -50,11 +52,13 @@
             // 
             this.dgvproveedores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproveedores.Location = new System.Drawing.Point(23, 97);
+            this.dgvproveedores.Location = new System.Drawing.Point(12, 91);
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.ReadOnly = true;
-            this.dgvproveedores.Size = new System.Drawing.Size(821, 297);
+            this.dgvproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvproveedores.Size = new System.Drawing.Size(961, 297);
             this.dgvproveedores.TabIndex = 0;
+            this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
             // 
             // cmbfamilias
             // 
@@ -64,10 +68,6 @@
             this.cmbfamilias.Name = "cmbfamilias";
             this.cmbfamilias.Size = new System.Drawing.Size(184, 21);
             this.cmbfamilias.TabIndex = 1;
-<<<<<<< HEAD
-=======
-            this.cmbfamilias.SelectedIndexChanged += new System.EventHandler(this.cmbfamilia_SelectedIndexChanged);
->>>>>>> origin/master
             // 
             // cmbproveedores
             // 
@@ -130,40 +130,54 @@
             this.lblbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbuscar.Location = new System.Drawing.Point(353, 57);
             this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(56, 16);
+            this.lblbuscar.Size = new System.Drawing.Size(49, 16);
             this.lblbuscar.TabIndex = 9;
-            this.lblbuscar.Text = "Buscar:";
+            this.lblbuscar.Text = "Filtrar:";
             // 
-            // btnbuscar
+            // chkBaja
             // 
-            this.btnbuscar.Location = new System.Drawing.Point(653, 56);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscar.TabIndex = 12;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            this.chkBaja.AutoSize = true;
+            this.chkBaja.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chkBaja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBaja.Location = new System.Drawing.Point(651, 8);
+            this.chkBaja.Name = "chkBaja";
+            this.chkBaja.Size = new System.Drawing.Size(123, 20);
+            this.chkBaja.TabIndex = 15;
+            this.chkBaja.Text = "Dados de Baja";
+            this.chkBaja.UseVisualStyleBackColor = false;
             // 
-            // bnteliminar
+            // chkTodos
             // 
-            this.bnteliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnteliminar.Image = global::ControlProductos.Properties.Resources.eliminar;
-            this.bnteliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bnteliminar.Location = new System.Drawing.Point(850, 265);
-            this.bnteliminar.Name = "bnteliminar";
-            this.bnteliminar.Size = new System.Drawing.Size(94, 38);
-            this.bnteliminar.TabIndex = 14;
-            this.bnteliminar.Text = "Eliminar";
-            this.bnteliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bnteliminar.UseVisualStyleBackColor = true;
-            this.bnteliminar.Click += new System.EventHandler(this.bnteliminar_Click);
+            this.chkTodos.AutoSize = true;
+            this.chkTodos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chkTodos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.Location = new System.Drawing.Point(651, 25);
+            this.chkTodos.Name = "chkTodos";
+            this.chkTodos.Size = new System.Drawing.Size(64, 20);
+            this.chkTodos.TabIndex = 16;
+            this.chkTodos.Text = "Todos";
+            this.chkTodos.UseVisualStyleBackColor = false;
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Image = global::ControlProductos.Properties.Resources.eliminar;
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.Location = new System.Drawing.Point(979, 266);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(94, 38);
+            this.btneliminar.TabIndex = 14;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.bnteliminar_Click);
             // 
             // btneditar
             // 
             this.btneditar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.Image = global::ControlProductos.Properties.Resources.editar;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btneditar.Location = new System.Drawing.Point(850, 221);
+            this.btneditar.Location = new System.Drawing.Point(979, 222);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(94, 38);
             this.btneditar.TabIndex = 13;
@@ -172,12 +186,27 @@
             this.btneditar.UseVisualStyleBackColor = true;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.Image = global::ControlProductos.Properties.Resources.buscaropc2;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbuscar.Location = new System.Drawing.Point(651, 47);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(96, 38);
+            this.btnbuscar.TabIndex = 12;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
             // btnvolver
             // 
             this.btnvolver.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolver.Image = global::ControlProductos.Properties.Resources.cancelar;
             this.btnvolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvolver.Location = new System.Drawing.Point(850, 177);
+            this.btnvolver.Location = new System.Drawing.Point(979, 178);
             this.btnvolver.Name = "btnvolver";
             this.btnvolver.Size = new System.Drawing.Size(94, 38);
             this.btnvolver.TabIndex = 11;
@@ -191,7 +220,7 @@
             this.btnnuevo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnuevo.Image = global::ControlProductos.Properties.Resources.agregar;
             this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnuevo.Location = new System.Drawing.Point(850, 133);
+            this.btnnuevo.Location = new System.Drawing.Point(979, 134);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(94, 38);
             this.btnnuevo.TabIndex = 10;
@@ -205,8 +234,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(948, 403);
-            this.Controls.Add(this.bnteliminar);
+            this.ClientSize = new System.Drawing.Size(1085, 520);
+            this.Controls.Add(this.chkTodos);
+            this.Controls.Add(this.chkBaja);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnvolver);
@@ -220,15 +251,10 @@
             this.Controls.Add(this.cmbproveedores);
             this.Controls.Add(this.cmbfamilias);
             this.Controls.Add(this.dgvproveedores);
-<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministrarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-=======
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AdministrarProducto";
->>>>>>> origin/master
             this.Text = "Administrar Producto";
             this.Load += new System.EventHandler(this.AdministrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).EndInit();
@@ -252,6 +278,8 @@
         private System.Windows.Forms.Button btnvolver;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.Button bnteliminar;
+        private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.CheckBox chkBaja;
+        private System.Windows.Forms.CheckBox chkTodos;
     }
 }

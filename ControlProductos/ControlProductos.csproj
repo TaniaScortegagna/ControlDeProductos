@@ -152,6 +152,24 @@
   <ItemGroup>
     <None Include="Iconos\eliminar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\buscaropc2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\Producto abm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\Logout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

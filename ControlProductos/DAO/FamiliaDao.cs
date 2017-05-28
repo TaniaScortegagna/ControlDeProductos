@@ -27,12 +27,8 @@ namespace ControlProductos
                 oFamilia.Id = Convert.ToInt32(familia["IdFamilia"]);
                 oFamilia.Nombre = familia["Nombre"].ToString();
                 listaFamilias.Add(oFamilia);
-<<<<<<< HEAD
             }
             listaFamilias.Insert(0, new Familia() { Id = 0, Nombre = "<Seleccione un Item>"});
-=======
-            }         
->>>>>>> origin/master
 
             cnn.Desconectar();
             return listaFamilias;

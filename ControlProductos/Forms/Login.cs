@@ -16,27 +16,15 @@ namespace ControlProductos
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         private void btnaceptar_Click(object sender, EventArgs e)
         {
             ValidarUsuario();
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         private void btncancelar_Click(object sender, EventArgs e)
         {
                 this.Close();
             
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         private void txbclave_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             if (Convert.ToInt32(e.KeyChar) == 13)
@@ -51,11 +39,10 @@ namespace ControlProductos
                 SendKeys.Send("{TAB}");
             }
         }
-<<<<<<< HEAD
         private void ValidarUsuario()
         {
             UsuarioDao UsuarioOb = new UsuarioDao();
-            if (UsuarioOb.BuscarUsuario(this.txbusuario.Text, this.txbclave.Text) == true)
+            if (UsuarioOb.BuscarUsuario(this.txbusuario.Text, this.txbclave.Text))
                 {
                    MenuPrincipal iniciar = new MenuPrincipal();
                    iniciar.Show();
@@ -66,25 +53,5 @@ namespace ControlProductos
                  
         }
 
-=======
-
-        private void ValidarUsuario()
-        {
-            UsuarioDao UsuarioOb = new UsuarioDao();
-
-            if (UsuarioOb.BuscarUsuario(this.txbusuario.Text, this.txbclave.Text) == true)
-            {
-
-                MenuPrincipal iniciar = new MenuPrincipal();
-                iniciar.Show();
-                this.Hide();
-
-            }
-            else
-                MessageBox.Show("DATOS INCORRECTOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-
->>>>>>> origin/master
     }
 }

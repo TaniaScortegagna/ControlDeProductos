@@ -17,7 +17,6 @@ namespace ControlProductos
             Conexion cnn = new Conexion();
             string pConsulta = string.Format("SP_LISTAR_RUBROS");
             cnn.AgregarParametro("@idFlia", pIdFlia.ToString(), SqlDbType.Int);
-<<<<<<< HEAD
             DataTable resultado = cnn.EjecutarQuery(pConsulta);            
             foreach (DataRow rubro in resultado.Rows)
             {
@@ -36,10 +35,6 @@ namespace ControlProductos
             Conexion cnn = new Conexion();
             string pConsulta = string.Format("SP_LISTAR_RUBROS_SIN_FAMILIA");
             DataTable resultado = cnn.EjecutarQuery(pConsulta);
-=======
-            DataTable resultado = cnn.EjecutarQuery(pConsulta);
-            
->>>>>>> origin/master
             foreach (DataRow rubro in resultado.Rows)
             {
                 Rubro oRubro = new Rubro();

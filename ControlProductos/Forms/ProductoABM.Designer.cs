@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoABM));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,9 +46,14 @@
             this.cmbfamilias = new System.Windows.Forms.ComboBox();
             this.cmbrubros = new System.Windows.Forms.ComboBox();
             this.txbprecio = new System.Windows.Forms.TextBox();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.picBABM = new System.Windows.Forms.PictureBox();
+            this.btnactualizar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
-            this.btnactualizar = new System.Windows.Forms.Button();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBABM)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,6 +149,7 @@
             this.txbnombre.Name = "txbnombre";
             this.txbnombre.Size = new System.Drawing.Size(128, 20);
             this.txbnombre.TabIndex = 9;
+            this.txbnombre.Validated += new System.EventHandler(this.txbnombre_Validated);
             // 
             // txbdescripcion
             // 
@@ -150,6 +157,7 @@
             this.txbdescripcion.Name = "txbdescripcion";
             this.txbdescripcion.Size = new System.Drawing.Size(128, 20);
             this.txbdescripcion.TabIndex = 10;
+            this.txbdescripcion.Validated += new System.EventHandler(this.txbdescripcion_Validated);
             // 
             // txbmarca
             // 
@@ -157,6 +165,7 @@
             this.txbmarca.Name = "txbmarca";
             this.txbmarca.Size = new System.Drawing.Size(128, 20);
             this.txbmarca.TabIndex = 11;
+            this.txbmarca.Validated += new System.EventHandler(this.txbmarca_Validated);
             // 
             // cmbproveedores
             // 
@@ -166,6 +175,7 @@
             this.cmbproveedores.Name = "cmbproveedores";
             this.cmbproveedores.Size = new System.Drawing.Size(121, 21);
             this.cmbproveedores.TabIndex = 12;
+            this.cmbproveedores.Validated += new System.EventHandler(this.cmbproveedores_Validated);
             // 
             // cmbfamilias
             // 
@@ -176,6 +186,7 @@
             this.cmbfamilias.Size = new System.Drawing.Size(121, 21);
             this.cmbfamilias.TabIndex = 13;
             this.cmbfamilias.SelectedIndexChanged += new System.EventHandler(this.cmbfamilias_SelectedIndexChanged);
+            this.cmbfamilias.Validated += new System.EventHandler(this.cmbfamilias_Validated);
             // 
             // cmbrubros
             // 
@@ -185,6 +196,7 @@
             this.cmbrubros.Name = "cmbrubros";
             this.cmbrubros.Size = new System.Drawing.Size(121, 21);
             this.cmbrubros.TabIndex = 14;
+            this.cmbrubros.Validated += new System.EventHandler(this.cmbrubros_Validated);
             // 
             // txbprecio
             // 
@@ -192,13 +204,42 @@
             this.txbprecio.Name = "txbprecio";
             this.txbprecio.Size = new System.Drawing.Size(121, 20);
             this.txbprecio.TabIndex = 15;
+            this.txbprecio.Validated += new System.EventHandler(this.txbprecio_Validated);
+            // 
+            // epError
+            // 
+            this.epError.ContainerControl = this;
+            // 
+            // picBABM
+            // 
+            this.picBABM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picBABM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBABM.Image = global::ControlProductos.Properties.Resources.Producto_abm1;
+            this.picBABM.Location = new System.Drawing.Point(522, 35);
+            this.picBABM.Name = "picBABM";
+            this.picBABM.Size = new System.Drawing.Size(78, 252);
+            this.picBABM.TabIndex = 19;
+            this.picBABM.TabStop = false;
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Image = global::ControlProductos.Properties.Resources.guardar;
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Location = new System.Drawing.Point(156, 267);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(133, 40);
+            this.btnactualizar.TabIndex = 18;
+            this.btnactualizar.Text = "Guardar Cambios";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btncancelar
             // 
             this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.Image = global::ControlProductos.Properties.Resources.cancelar;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncancelar.Location = new System.Drawing.Point(362, 276);
+            this.btncancelar.Location = new System.Drawing.Point(308, 267);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(133, 40);
             this.btncancelar.TabIndex = 17;
@@ -211,7 +252,7 @@
             this.btnguardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = global::ControlProductos.Properties.Resources.guardar;
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnguardar.Location = new System.Drawing.Point(209, 276);
+            this.btnguardar.Location = new System.Drawing.Point(156, 267);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(133, 40);
             this.btnguardar.TabIndex = 16;
@@ -219,25 +260,25 @@
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
-            // btnactualizar
+            // chkActivo
             // 
-            this.btnactualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactualizar.Image = global::ControlProductos.Properties.Resources.guardar;
-            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnactualizar.Location = new System.Drawing.Point(53, 276);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(133, 40);
-            this.btnactualizar.TabIndex = 18;
-            this.btnactualizar.Text = "Guardar Cambios";
-            this.btnactualizar.UseVisualStyleBackColor = true;
-            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkActivo.Location = new System.Drawing.Point(27, 267);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(68, 20);
+            this.chkActivo.TabIndex = 20;
+            this.chkActivo.Text = "Activo";
+            this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // ProductoABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(580, 328);
+            this.ClientSize = new System.Drawing.Size(614, 314);
+            this.Controls.Add(this.chkActivo);
+            this.Controls.Add(this.picBABM);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
@@ -257,17 +298,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProductoABM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-=======
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ProductoABM";
->>>>>>> origin/master
             this.Text = "Producto";
+            this.Activated += new System.EventHandler(this.ProductoABM_Activated);
             this.Load += new System.EventHandler(this.ProductoABM_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBABM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +333,8 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnactualizar;
+        private System.Windows.Forms.ErrorProvider epError;
+        private System.Windows.Forms.PictureBox picBABM;
+        private System.Windows.Forms.CheckBox chkActivo;
     }
 }

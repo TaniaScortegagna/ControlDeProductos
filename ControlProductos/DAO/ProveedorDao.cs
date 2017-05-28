@@ -29,6 +29,7 @@ namespace ControlProductos
             }
 
             listaProveedores.Insert(0, new Proveedor() { Id = 0, Nombre = "<Seleccione un Item>" });
+            cnn.Desconectar();
             return listaProveedores;
         }
     }

@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 
 namespace ControlProductos
 {
-<<<<<<< HEAD
     public class Proveedor
-=======
-<<<<<<< HEAD
-    public class Proveedor
-=======
-    class Proveedor
->>>>>>> origin/master
->>>>>>> origin/master
     {
         public int Id { get; set; }
         public String Nombre{ get; set; }

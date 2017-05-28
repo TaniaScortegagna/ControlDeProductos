@@ -15,7 +15,6 @@ namespace ControlProductos
 
         public bool BuscarUsuario(string pUsuario,string pClave )
         {
-<<<<<<< HEAD
 
                     Conexion cnn = new Conexion();            
                     string pConsulta = string.Format("SP_VERIFICAR_USUARIO");
@@ -25,15 +24,6 @@ namespace ControlProductos
                     cnn.Desconectar();
                     return resultado.Rows.Count > 0;
 
-=======
-            Conexion cnn = new Conexion();            
-            string pConsulta = string.Format("SP_VERIFICAR_USUARIO");
-            cnn.AgregarParametro("@Usuario", pUsuario.ToString(),SqlDbType.VarChar);
-            cnn.AgregarParametro("@Clave", pClave.ToString(), SqlDbType.Int);
-            DataTable resultado = cnn.EjecutarQuery(pConsulta);
-            cnn.Desconectar();
-            return resultado.Rows.Count > 0;
->>>>>>> origin/master
 
         }
    }
