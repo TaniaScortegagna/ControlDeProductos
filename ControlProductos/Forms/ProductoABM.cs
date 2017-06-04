@@ -242,19 +242,6 @@ namespace ControlProductos
             }
 
         }
-        private void cmbrubros_Validated(object sender, EventArgs e)
-        {
-            if ((int)cmbrubros.SelectedValue == 0)
-            {
-                epError.SetError(cmbrubros, "Seleccione rubro");
-                cmbrubros.Focus();
-            }
-            else
-            {
-                epError.Clear();
-            }
-
-        }
         private void ProductoABM_Activated(object sender, EventArgs e)
         {
             txbnombre.Focus();

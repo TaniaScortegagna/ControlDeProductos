@@ -38,7 +38,7 @@
             // 
             // btnadminproveedores
             // 
-            this.btnadminproveedores.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnadminproveedores.BackColor = System.Drawing.Color.White;
             this.btnadminproveedores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadminproveedores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnadminproveedores.Image = global::ControlProductos.Properties.Resources.AdmPrv;
@@ -52,7 +52,7 @@
             // 
             // btnadminrubros
             // 
-            this.btnadminrubros.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnadminrubros.BackColor = System.Drawing.Color.White;
             this.btnadminrubros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadminrubros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnadminrubros.Image = global::ControlProductos.Properties.Resources.AdmRubros;
@@ -66,7 +66,7 @@
             // 
             // btnadminfamilias
             // 
-            this.btnadminfamilias.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnadminfamilias.BackColor = System.Drawing.Color.White;
             this.btnadminfamilias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadminfamilias.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnadminfamilias.Image = global::ControlProductos.Properties.Resources.AdmFlia;
@@ -80,7 +80,7 @@
             // 
             // btnadminproductos
             // 
-            this.btnadminproductos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnadminproductos.BackColor = System.Drawing.Color.White;
             this.btnadminproductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadminproductos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnadminproductos.Image = global::ControlProductos.Properties.Resources.AdmProd;
@@ -113,8 +113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::ControlProductos.Properties.Resources.IMGprod2;
-            this.ClientSize = new System.Drawing.Size(660, 309);
+            this.ClientSize = new System.Drawing.Size(682, 334);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnadminproveedores);
             this.Controls.Add(this.btnadminrubros);
@@ -125,6 +124,7 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.ResumeLayout(false);
 
         }

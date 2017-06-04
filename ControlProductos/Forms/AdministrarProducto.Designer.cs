@@ -56,9 +56,9 @@
             this.dgvproveedores.Name = "dgvproveedores";
             this.dgvproveedores.ReadOnly = true;
             this.dgvproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvproveedores.Size = new System.Drawing.Size(961, 297);
+            this.dgvproveedores.Size = new System.Drawing.Size(961, 417);
             this.dgvproveedores.TabIndex = 0;
-            this.dgvproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellContentClick);
+            this.dgvproveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproveedores_CellClick);
             // 
             // cmbfamilias
             // 

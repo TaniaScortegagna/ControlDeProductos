@@ -196,7 +196,6 @@
             this.cmbrubros.Name = "cmbrubros";
             this.cmbrubros.Size = new System.Drawing.Size(121, 21);
             this.cmbrubros.TabIndex = 14;
-            this.cmbrubros.Validated += new System.EventHandler(this.cmbrubros_Validated);
             // 
             // txbprecio
             // 

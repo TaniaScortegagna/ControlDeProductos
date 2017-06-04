@@ -15,7 +15,7 @@ namespace ControlProductos
         public AdministrarProducto()
         {
             InitializeComponent();
-        }
+        }     
         private void AdministrarProducto_Load(object sender, EventArgs e)
         {
            
@@ -56,11 +56,15 @@ namespace ControlProductos
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             btneditar.Visible = false;
-            btneliminar.Visible = false;        
+            btneliminar.Visible = false;
+            consultaBuscarProducto();
+        }
+        private void consultaBuscarProducto()
+        {
             string activo = "1";
             if (chkBaja.Checked)
             {
-                 activo = "0";            
+                activo = "0";
             }
             if (chkTodos.Checked)
             {
@@ -68,7 +72,7 @@ namespace ControlProductos
             }
 
             ProductoDao oProductos = new ProductoDao();
-            dgvproveedores.DataSource = oProductos.buscarProducto(cmbfamilias.SelectedValue.ToString(), cmbrubros.SelectedValue.ToString(), cmbproveedores.SelectedValue.ToString(), txbbuscar.Text,activo);
+            dgvproveedores.DataSource = oProductos.buscarProducto(cmbfamilias.SelectedValue.ToString(), cmbrubros.SelectedValue.ToString(), cmbproveedores.SelectedValue.ToString(), txbbuscar.Text, activo);
             dgvproveedores.Columns["IdProveedor"].Visible = false;
             dgvproveedores.Columns["IdRubro"].Visible = false;
             dgvproveedores.Columns["IdFamilia"].Visible = false;
@@ -79,6 +83,7 @@ namespace ControlProductos
             ProductoABM EditarProducto = new ProductoABM();
             EditarProducto.objProductoParaEditar = oProducto;
             EditarProducto.ShowDialog();
+            consultaBuscarProducto();
             
         }
         private Producto enviarProdEditar()
@@ -97,22 +102,33 @@ namespace ControlProductos
         }
         private void bnteliminar_Click(object sender, EventArgs e)
         {
-            Producto oProducto = new Producto();
-            oProducto.Codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
-            ProductoDao oProductoDAO = new ProductoDao();
-            if (oProductoDAO.bajaProducto(oProducto))
+            if (Convert.ToBoolean(this.dgvproveedores.CurrentRow.Cells["Activo"].Value.ToString()))
             {
-                MessageBox.Show("PRODUCTO DADO DE BAJA", "CORRECTO");
+                DialogResult darBajaOK = MessageBox.Show("El producto con Codigo:  " + this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString() + "  sera dado de baja,Esta seguro?", "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                if (darBajaOK == DialogResult.OK)
+                {
+                    Producto oProducto = new Producto();
+                    oProducto.Codigo = Convert.ToInt32(this.dgvproveedores.CurrentRow.Cells["Codigo"].Value.ToString());
+                    ProductoDao oProductoDAO = new ProductoDao();
+                    if (oProductoDAO.bajaProducto(oProducto))
+                    {
+                        MessageBox.Show("PRODUCTO DADO DE BAJA", "CORRECTO");
+                        consultaBuscarProducto();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR AL DAR LA BAJA", "CORRECTO");
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("ERROR AL DAR LA BAJA", "CORRECTO");
+                MessageBox.Show("PRODUCTO YA DADO DE BAJA", "ERROR");
             }
 
-
         }
-        private void dgvproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvproveedores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btneditar.Visible = true;
             btneliminar.Visible = true;
