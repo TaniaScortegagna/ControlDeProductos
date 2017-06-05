@@ -33,7 +33,6 @@
             this.btnadminrubros = new System.Windows.Forms.Button();
             this.btnadminfamilias = new System.Windows.Forms.Button();
             this.btnadminproductos = new System.Windows.Forms.Button();
-            this.btncerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnadminproveedores
@@ -93,20 +92,6 @@
             this.btnadminproductos.UseVisualStyleBackColor = false;
             this.btnadminproductos.Click += new System.EventHandler(this.btnadminproductos_Click);
             // 
-            // btncerrar
-            // 
-            this.btncerrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrar.Image = global::ControlProductos.Properties.Resources.Logout;
-            this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncerrar.Location = new System.Drawing.Point(518, 5);
-            this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(132, 41);
-            this.btncerrar.TabIndex = 4;
-            this.btncerrar.Text = "Cerrar sesion";
-            this.btncerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncerrar.UseVisualStyleBackColor = false;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,7 +99,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(682, 334);
-            this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnadminproveedores);
             this.Controls.Add(this.btnadminrubros);
             this.Controls.Add(this.btnadminfamilias);
@@ -124,7 +108,6 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.ResumeLayout(false);
 
         }
@@ -135,6 +118,5 @@
         private System.Windows.Forms.Button btnadminfamilias;
         private System.Windows.Forms.Button btnadminrubros;
         private System.Windows.Forms.Button btnadminproveedores;
-        private System.Windows.Forms.Button btncerrar;
     }
 }

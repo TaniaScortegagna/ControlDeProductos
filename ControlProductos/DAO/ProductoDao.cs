@@ -37,7 +37,7 @@ namespace ControlProductos
             DataTable resultado = cnn.EjecutarQuery(pConsulta);
             return resultado;
         }
-      public int proxCod()
+        public int proxCod()
         {
             Conexion cnn = new Conexion();
             string pConsulta = string.Format("SP_MOSTRAR_CODIGO_PRODUCTO");

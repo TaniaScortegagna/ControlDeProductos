@@ -20,12 +20,14 @@ namespace ControlProductos
         {
             if (objProductoParaEditar == null)
             {
+                ultimoCodigo();
                 CargarCombos();
                 btnactualizar.Visible = false;
                 chkActivo.Visible = false;
             }
             else
             {
+                
                 CargarCombos();
                 llenarFormEditar();
                 btnguardar.Visible = false;
@@ -207,7 +209,7 @@ namespace ControlProductos
         {
             if (txbprecio.Text.Trim() == "")
             {
-                epError.SetError(txbprecio, "Intruduce Marca");
+                epError.SetError(txbprecio, "Intruduce Precio");
                 txbprecio.Focus();
             }
             else

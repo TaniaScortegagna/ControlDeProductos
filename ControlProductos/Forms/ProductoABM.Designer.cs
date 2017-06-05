@@ -140,6 +140,7 @@
             // 
             this.txbcodigo.Location = new System.Drawing.Point(134, 46);
             this.txbcodigo.Name = "txbcodigo";
+            this.txbcodigo.ReadOnly = true;
             this.txbcodigo.Size = new System.Drawing.Size(128, 20);
             this.txbcodigo.TabIndex = 8;
             // 
